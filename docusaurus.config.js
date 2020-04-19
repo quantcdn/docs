@@ -1,17 +1,17 @@
 module.exports = {
   title: 'QuantCDN',
   tagline: 'Developer docs',
-  url: 'https://quantcdn.io',
+  url: 'https://develop.quantcdn.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'quantcdn', // Usually your GitHub org/user name.
+  projectName: 'quant-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'QuantCDN',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'QuantCDN Logo',
+        src: 'img/logo.png',
       },
       links: [
         {
@@ -22,8 +22,18 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/quantcdn',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://quantcdn.io',
+          label: 'quantcdn.io',
+          position: 'right',
+        },
+        {
+          href: 'https://support.quantcdn.io',
+          label: 'Support',
           position: 'right',
         },
       ],
@@ -75,7 +85,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} QuantCDN Pty Ltd. Built with Docusaurus, Deployed via Quant.`,
     },
   },
   presets: [
