@@ -5,7 +5,7 @@
 
 The docs.quantcdn.io site is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-Built docs are automatically deployed to QuantCDN using [quant-cli](https://github.com/quant/node-cli).
+Built docs are automatically deployed to QuantCDN using [quant-cli](https://github.com/quantcdn/node-cli).
 
 
 ### Installation
