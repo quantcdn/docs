@@ -1,4 +1,4 @@
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/quantcdn/Quant%20docs%2Fquant-docs?key=eyJhbGciOiJIUzI1NiJ9.NWU5ZDVmZmE1MWJmOTZjYTU0NWRiNTBk.2vLiCtkYTfWcwAbwbzuL5KlwSrZRXetNTXgpWn5ZMag&type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpipelines%2Fquant-docs%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5e9d6314ea5ddb6d218cf67d~quant-docs)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/quantcdn/QuantCDN%2Fquant-docs?key=eyJhbGciOiJIUzI1NiJ9.NWU5ZDVmZmE1MWJmOTZjYTU0NWRiNTBk.2vLiCtkYTfWcwAbwbzuL5KlwSrZRXetNTXgpWn5ZMag&type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpipelines%2Fquant-docs%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5e9d6314ea5ddb6d218cf67d~quant-docs)
 
 
 # QuantCDN developer docs
