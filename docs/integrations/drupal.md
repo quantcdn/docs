@@ -1,7 +1,7 @@
 ---
 id: drupal
 title: Get started with Quant and Drupal
-sidebar_label: Get started
+sidebar_label: Drupal
 ---
 
 Overview of what is provided...

@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Home: ['welcome', 'doc2', 'doc3'],
+    Home: ['welcome'],
     "Deployments": ['deploy/overview'],
     "Dashboard": [
       "dashboard/get-started",
