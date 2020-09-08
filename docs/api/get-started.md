@@ -52,7 +52,7 @@ This is the main action of the Quant API and is how we register paths and conten
 curl -X POST https://api.quantcdn.io/v1 -d @./payload.json
 ```
 
-```
+```json
 {
   "content": "<html><body><img src="/banner.jpg" /><h1>My static web page</h1></body></html>",
   "url": "/".
@@ -67,7 +67,7 @@ The Quant API will scan your markup and identify any missing assets by comparing
 
 ### Sending assets
 
-The second part to a web page is all the assets that help provide the visual experience. This includes images, javascript, stylesheets and even video files! Files are sent as multipart uploads directly to the Quant API. Quant will handle inspecting and creating revisions of the assets.
+The second part to a web page is all the assets that help provide the visual experience. This includes images, javascript, stylesheets, video files and all other static assets. Files are sent as multipart uploads directly to the Quant API. Quant will handle inspecting and creating revisions of the assets.
 
 To add a URL for the file you need to specify the `Quant-File-Url` header.
 
@@ -76,39 +76,113 @@ curl -X POST https://api.quantcdn.io/v1 -F "filename=@./banner.jpg" -H "Quant-Fi
 ```
 
 :::tip
-If you send markup Quant will identify only files that have changed or are missing so you don't have to send everything each time.
+If you send markup Quant will identify assets that are missing, this reduces the number of API requests you need to make to seed your static website.
 :::
 
 ## Commonly used endpoints
 
 ### Metadata
 
-All files deployed to Quant have metadata stored about them.
+When you request metadata about your site, Quant will send a paginated API response containing information about your files that is not served to end users. This includes information like the published revision, the number of revisions, where the file is access and more.
+
+The endpoint requires the standard authentication headers described above.
 
 ```
 GET /global-meta
 ```
 
+```json
+{
+  "global_meta": {
+    "records": [
+      {
+        "last_modified": "2020-07-20T10:21:11",
+        "meta": {
+          "url": "/about-us",
+          "type": "content",
+          "seq_num": 3,
+          "published": true,
+          "byte_length": 41750,
+          "published_md5": "1476374aafe25fb499729ee7e4505e62",
+          "date_timestamp": 1595240471,
+          "revision_count": 3,
+          "published_revision": 3,
+          "highest_revision_number": 3
+        }
+      },
+    ]
+  }
+}
+```
+
 ### Unpublish an asset
 
+`PATCH /unpublish` instructs Quant that a particular path is no longer accessible. This will cause Quant to issue a 404 for the path instead of the content stored for the path.
 
-
-```
-PATCH /unpublish
+```json
+{
+  "published": false,
+  "published_revision": 2,
+  "url": "\/about-us",
+  "revisions": {
+    "1": {
+      "md5": "cf1cbd8d24db376425cdc78033a1cdfb",
+      "type": "content",
+      "byte_length": 135,
+      "revision_number": 1,
+      "date_timestamp": 1595240437
+    },
+    "2": {
+      "revision_number": 2,
+      "date_timestamp": 1595240449,
+      "byte_length": 41750,
+      "md5": "1476374aafe25fb499729ee7e4505e62",
+      "type": "content"
+    }
+  },
+  "transitions": {},
+  "highest_revision_number": 2,
+  "seq_num": 4
+}
 ```
 
 ### Create a redirect
 
-This endpoint allows you to redirect one route to another. The destination route needs to exist in Quant to be a valid redirect location.
+`POST /redirect` creates a redirect.
 
-```
-POST /redirect
+This allows you to redirect one path to another when Quant is serving pages. You can control the status code that quant serve when you create this redirect.
+
+```json
+{
+  "revision_number": 3,
+  "redirect_http_code": 301,
+  "md5": "db2e492983fb28e9e7f86d0487f5670b",
+  "published": true,
+  "byte_length": 0,
+  "date_timestamp": 1599217598,
+  "url": "\/nalas.jpg",
+  "redirect_url": "\/",
+  "highest_revision_number": 2,
+  "type": "redirect"
+}
 ```
 
 ### Create a proxy
 
-If you use one of Quants integration methods you might need to rely on origin for processing some data. This allows you to create a direct passthru from Quant Serve when a request is made for the URL you define it will be proxied directly back to your origin server.
+`POST /proxy` creates an origin proxy.
 
-```
-POST /proxy
+This will cause Quant Serve to pass the request directly back to the origin server.
+
+```json
+{
+  "revision_number": 1,
+  "destination": "https:\/\/www.google.com.au",
+  "published": true,
+  "byte_length": 0,
+  "md5": "592ea306c467b2d055e60f6c83fc322d",
+  "url": "\/google",
+  "type": "proxy",
+  "highest_revision_number": 0,
+  "date_timestamp": 1599218157
+}
 ```
