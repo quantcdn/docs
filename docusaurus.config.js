@@ -7,13 +7,19 @@ module.exports = {
   organizationName: 'quantcdn', // Usually your GitHub org/user name.
   projectName: 'quant-docs', // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: '',
+      indexName: '',
+      appId: '',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
     navbar: {
       title: 'QuantCDN',
       logo: {
         alt: 'QuantCDN Logo',
         src: 'img/logo.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/welcome',
           activeBasePath: 'docs',
