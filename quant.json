@@ -1,6 +1,0 @@
-{
-  "clientid": "dev",
-  "token": "test",
-  "endpoint": "http://localhost:8081/",
-  "dir": "build"
-}
