@@ -69,13 +69,14 @@ a.button:active {
   background-color: #21c4de;
 }
 
-.features_src-pages- {
+.home--features {
   background: #18191a;
   color: white;
+  padding: 40px 0px;
 }
 
-.features_src-pages- .featureImage_src-pages- {
-  margin: 35px 0px;
+.home--features img {
+  margin: 20px 0px;
   height: 100px;
   width: 100px;
 }

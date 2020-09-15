@@ -22,7 +22,8 @@ module.exports = {
     ],
     "Deployments": ['deploy/overview'],
     "CLI": [
-      "cli/get-started"
+      "cli/get-started",
+      "cli/continuous-integration"
     ],
     "API": [
       "api/get-started",

@@ -78,7 +78,7 @@ function Home() {
       </header>
       <main>
         {features && features.length && (
-          <section className={styles.features}>
+          <section className="home--features">
             <div className="container">
               <div className="row">
                 {features.map((props, idx) => (
