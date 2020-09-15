@@ -112,7 +112,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/quantcdn/docs/tree/develop/docs',
+            'https://github.com/quantcdn/docs/tree/develop',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
