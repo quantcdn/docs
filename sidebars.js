@@ -1,24 +1,33 @@
 module.exports = {
   someSidebar: {
-    Home: ['welcome'],
-    "Deployments": ['deploy/overview'],
+    Home: [
+      "welcome",
+      "fundamentals",
+      "features",
+      "benefits",
+    ],
+    "Integrations": [
+      "integrations/overview",
+      "integrations/drupal",
+      "integrations/wordpress",
+      "integrations/static-generators",
+    ],
     "Dashboard": [
       "dashboard/get-started",
+      "dashboard/create-project",
       "dashboard/domains",
       "dashboard/https",
       "dashboard/alerts",
       "dashboard/custom-http-headers",
     ],
-    "API": [
-      "api/get-started"
-    ],
+    "Deployments": ['deploy/overview'],
     "CLI": [
       "cli/get-started"
     ],
-    "Integrations": [
-      "integrations/overview",
-      "integrations/drupal",
-      "integrations/wordpress"
+    "API": [
+      "api/get-started",
+      "api/client-workflow"
     ],
+
   },
 };

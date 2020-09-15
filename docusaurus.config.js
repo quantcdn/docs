@@ -1,18 +1,21 @@
 module.exports = {
   title: 'QuantCDN',
-  tagline: 'Developer docs',
-  url: 'https://develop.quantcdn.io',
+  tagline: 'Documentation & Guides',
+  url: 'https://docs.quantcdn.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'quantcdn', // Usually your GitHub org/user name.
-  projectName: 'quant-docs', // Usually your repo name.
+  projectName: 'docs', // Usually your repo name.
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap',
+  ],
   themeConfig: {
-    algolia: {
-      apiKey: '',
-      indexName: '',
-      appId: '',
-      algoliaOptions: {}, // Optional, if provided by Algolia
-    },
+    //algolia: {
+    //  apiKey: '',
+    //  indexName: '',
+    //  appId: '',
+    //  algoliaOptions: {}, // Optional, if provided by Algolia
+    //},
     navbar: {
       title: 'QuantCDN',
       logo: {
@@ -48,28 +51,36 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Getting Started',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/doc1',
+              label: 'Create a project',
+              to: 'docs/dashboard/create-project',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'CMS integrations',
+              to: 'docs/integrations/overview',
+            },
+            {
+              label: 'Static site generators',
+              to: 'docs/integrations/static-generators',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Developers',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'API',
+              to: 'docs/api/get-started',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'CLI',
+              to: 'docs/cli/get-started',
+            },
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/quant',
             },
           ],
         },
@@ -82,11 +93,11 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/quantcdn',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/quantcdn',
             },
           ],
         },
@@ -101,7 +112,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/quantcdn/docs/tree/develop/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
