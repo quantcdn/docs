@@ -1,6 +1,6 @@
 ---
 id: wordpress
-title: Get started with Quant and Drupal
+title: Get started with Quant and Wordpress
 sidebar_label: Wordpress
 ---
 
