@@ -1,7 +1,7 @@
 ---
 id: content
 title: Managing content and revisions
-sidebar_label: Content and Revisions
+sidebar_label: Content and revisions
 ---
 
 Managing content and revisions is a fundamental part of the Quant offering. Revisions will automatically be created when content change is detected.

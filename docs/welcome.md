@@ -38,9 +38,9 @@ Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [
 
 ## Developers
 ### CLI
-You can use the [Quant CLI tool](#) to help automate integration with the Quant API. This allow you to trigger deployments, publish and unpublish routes and view metadata.
+You can use the [Quant CLI tool](/docs/cli/get-started) to help automate integration with the Quant API. This allow you to trigger deployments, publish and unpublish routes and view metadata.
 
 It is also capable of [crawling and migrating](/docs/cli/crawler) an entire site to Quant in minutes.
 
 ### API
-To get started with the Quant API, learn how to [authenticate](#), [seed content](#) and move into advanced topics like managing workflows and content states.
+To get started with the Quant API, learn how to [authenticate](docs/api/get-started#make-a-request), [seed content](/docs/api/get-started#sending-content-to-the-api) and move into advanced topics like managing workflows and content states.
