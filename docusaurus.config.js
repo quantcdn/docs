@@ -55,7 +55,7 @@ module.exports = {
           items: [
             {
               label: 'Create a project',
-              to: 'docs/dashboard/create-project',
+              to: 'docs/dashboard/get-started',
             },
             {
               label: 'CMS integrations',
@@ -63,7 +63,7 @@ module.exports = {
             },
             {
               label: 'Static site generators',
-              to: 'docs/integrations/static-generators',
+              to: 'docs/cli/get-started',
             },
           ],
         },

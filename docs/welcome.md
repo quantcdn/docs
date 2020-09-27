@@ -32,17 +32,15 @@ Popular static web builders operate by deploying compiled assets (markup, javasc
 
 Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [CI build pipeline](/docs/cli/continuous-integration).
 
+### Domains and TLS
+[Add an existing domain](/docs/dashboard/domains) to Quant to assign a custom domain to your site. We provide free automatic SSL certificates via LetsEncrypt.
 
 
+## Developers
+### CLI
+You can use the [Quant CLI tool](#) to help automate integration with the Quant API. This allow you to trigger deployments, publish and unpublish routes and view metadata.
 
-**One-click content hydration** &mdash; Quant has support for the most popular open-source CMS frameworks. Learn [how to configure](#) Quant, how to [enable](#)
+It is also capable of [crawling and migrating](/docs/cli/crawler) an entire site to Quant in minutes.
 
-**Domains and HTTPS** &mdash; [Add an exiting domain](#) to Quant to assign a custom domain to your site. We provide [free automatic HTTPS](#) via LetsEncrypt.
-
-**Forms** &mdash; @TODO
-
-**Search** &mdash; @TODO
-
-**CLI** &mdash; You can use the [Quant CLI tool](#) to help automate integration with the Quant API. This allow you to trigger deployments, publish and unpublish routes and view metadata.
-
-**API** &mdash; To get started with the Quant API, learn how to [authenticate](#), [seed content](#) and move into advanced topics like managing workflows and content states.
+### API
+To get started with the Quant API, learn how to [authenticate](#), [seed content](#) and move into advanced topics like managing workflows and content states.

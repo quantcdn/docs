@@ -44,7 +44,7 @@ The most common API action is sending content, either new content or a content r
 
 Quant is based on atomic deployments, each time a file changes Quant treats it as if a new file was submitted to the API. This allows Quant to show point in-time representations of any asset that has been sent to Quant.
 
-### Sending markup
+### Sending markup and content
 
 This is the main action of the Quant API and is how we register paths and content to be served from those paths. When you send markup you will need to tell Quant what URL this markup will be accessible by, if the content is published and additional metadata.
 
@@ -55,15 +55,33 @@ curl -X POST https://api.quantcdn.io/v1 -d @./payload.json
 ```json
 {
   "content": "<html><body><img src="/banner.jpg" /><h1>My static web page</h1></body></html>",
-  "url": "/".
+  "url": "/",
   "published": true,
   "info": {
-    "author": "Joe Static"
+    "author": "Joe Static",
+    "log": "Revision log message"
   }
 }
 ```
 
-The Quant API will scan your markup and identify any missing assets by comparing everything it can find. It will respond to your request with a list of assets that you will need to send before you have a complete static representation of your website.
+The Quant API will scan your markup and identify assets. It will respond to your request with a list of assets that already exist in Quant (along with md5 values) so you only need to push files that have changed or do not already exist.
+
+#### Custom headers
+
+You may optionally provide custom headers along with the content payload. This allows fine-grained control of the headers that are emitted for each individual piece of content. Simply include key/value pairs under the `header` key:
+
+```json
+{
+  "content": "{\"key\": \"example\", \"value\": \"example\"}",
+  "headers": {
+    "content-type": "application/json"
+  }
+}
+```
+
+:::tip
+This approach is useful for machine-readable content that is not markup. It allows for this content to be sent inline rather than as a binary file.
+:::
 
 ### Sending assets
 
@@ -76,14 +94,26 @@ curl -X POST https://api.quantcdn.io/v1 -F "filename=@./banner.jpg" -H "Quant-Fi
 ```
 
 :::tip
-If you send markup Quant will identify assets that are missing, this reduces the number of API requests you need to make to seed your static website.
+Send markup before binary files. The response will show any files already in Quant and reduce the number of API requests you need to make to seed your static website.
+:::
+
+### Custom headers
+
+As with content, files may also present custom headers. These are passed in as encoded JSON using the `Quant-File-Headers` header on the POST request.
+
+```
+curl -X POST https://api.quantcdn.io/v1 -F "filename=@./image.jpg" -H "Quant-File-Url: /path/to/extensionless-image" -H "Quant-File-Headers: {\"content-type\": \"image/jpeg\"}"
+```
+
+:::tip
+This is generally not required during normal operation, but included for completeness. Common headers expected for binary files such as `Content-type` and `Content-length` are automatically determined.
 :::
 
 ## Commonly used endpoints
 
 ### Metadata
 
-When you request metadata about your site, Quant will send a paginated API response containing information about your files that is not served to end users. This includes information like the published revision, the number of revisions, where the file is access and more.
+When you request metadata about your site, Quant will send a paginated API response containing information about your files that is not served to end users. This includes information like the published revision, the number of revisions, where the file is accessed and more.
 
 The endpoint requires the standard authentication headers described above.
 
@@ -115,35 +145,24 @@ GET /global-meta
 }
 ```
 
-### Unpublish an asset
+You may query for the metadata of individual URLs using the `/url-meta` endpoint.
+```
+curl -X POST -d '{"Quant-Url": ["/styles.css", "/about-us" ]}' https://api.quantcdn.io/url-meta
+```
+
+### Unpublish content
 
 `PATCH /unpublish` instructs Quant that a particular path is no longer accessible. This will cause Quant to issue a 404 for the path instead of the content stored for the path.
 
-```json
-{
-  "published": false,
-  "published_revision": 2,
-  "url": "\/about-us",
-  "revisions": {
-    "1": {
-      "md5": "cf1cbd8d24db376425cdc78033a1cdfb",
-      "type": "content",
-      "byte_length": 135,
-      "revision_number": 1,
-      "date_timestamp": 1595240437
-    },
-    "2": {
-      "revision_number": 2,
-      "date_timestamp": 1595240449,
-      "byte_length": 41750,
-      "md5": "1476374aafe25fb499729ee7e4505e62",
-      "type": "content"
-    }
-  },
-  "transitions": {},
-  "highest_revision_number": 2,
-  "seq_num": 4
-}
+```
+curl -X PATCH -H "Quant-Url: /path/to/unpublish"
+```
+
+### Restore a previous revision
+`PATCH /publish/[REVISION_ID]` allows a previous revision to become the actively published content. You may retrieve revision ids via the metadata endpoints.
+
+```
+curl -X PATCH -H "Quant-Url: /content" https://api.quantcdn.io/publish/123
 ```
 
 ### Create a redirect
@@ -154,16 +173,10 @@ This allows you to redirect one path to another when Quant is serving pages. You
 
 ```json
 {
-  "revision_number": 3,
-  "redirect_http_code": 301,
-  "md5": "db2e492983fb28e9e7f86d0487f5670b",
-  "published": true,
-  "byte_length": 0,
-  "date_timestamp": 1599217598,
-  "url": "\/nalas.jpg",
-  "redirect_url": "\/",
-  "highest_revision_number": 2,
-  "type": "redirect"
+  "url" : "/url/to/redirect",
+  "redirect_url" : "/target/path",
+  "redirect_http_code" : 301,
+  "published" : true
 }
 ```
 
@@ -175,14 +188,11 @@ This will cause Quant Serve to pass the request directly back to the origin serv
 
 ```json
 {
-  "revision_number": 1,
-  "destination": "https:\/\/www.google.com.au",
+  "url" : "/contact-us",
+  "destination": "https://123.123.123.123/contact-us",
+  "host": "www.example.com",
   "published": true,
-  "byte_length": 0,
-  "md5": "592ea306c467b2d055e60f6c83fc322d",
-  "url": "\/google",
-  "type": "proxy",
-  "highest_revision_number": 0,
-  "date_timestamp": 1599218157
+  "basic_auth_user": "username",
+  "basic_auth_pass": "password"
 }
 ```
