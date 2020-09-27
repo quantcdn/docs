@@ -43,4 +43,4 @@ You can use the [Quant CLI tool](/docs/cli/get-started) to help automate integra
 It is also capable of [crawling and migrating](/docs/cli/crawler) an entire site to Quant in minutes.
 
 ### API
-To get started with the Quant API, learn how to [authenticate](docs/api/get-started#make-a-request), [seed content](/docs/api/get-started#sending-content-to-the-api) and move into advanced topics like managing workflows and content states.
+To get started with the Quant API, learn how to [authenticate](/docs/api/get-started#make-a-request), [seed content](/docs/api/get-started#sending-content-to-the-api) and move into advanced topics like managing workflows and content states.
