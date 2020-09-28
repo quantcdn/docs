@@ -21,10 +21,6 @@ Quant users bearer tokens for authentication. All requests must specify the `Qua
 
 To further identify your request you are required to add `Quant-Customer` and `Quant-Project` request headers. These will be validated against the `Quant-Token` to ensure that the request is valid.
 
-## Rate limiting
-
-@TODO
-
 ## Pagination
 
 Requests that return multiple items will be paginated to 100 items by default. You can specify the `page` query parameter to iterate through the result set. You can also change the number returned by quant with the `per_page` parameter.
