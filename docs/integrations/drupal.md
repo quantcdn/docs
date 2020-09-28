@@ -31,12 +31,3 @@ Once the initial seed is completed all further content change will be tracked an
 If you have made sweeping, site-wide change then a re-seed may be required. This could be in the following situations:
 - Global look and feel changes (e.g Theme)
 - Global IA change (e.g links in navigation)
-
-
-## Advanced
-
-@todo:
-- drush
-- cron
-- module extension (event subscription)
-
