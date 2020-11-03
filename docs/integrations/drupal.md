@@ -10,7 +10,7 @@ Drupal modules exist for 7, 8, and 9. The codebases are (maintained in Github)[h
 
 1. Download the Quant module either via composer (`composer require drupal/quantcdn`) or from [Drupal.org](https://drupal.org/project/quantcdn)
 2. Install the module and visit the Configuration > Quant admin page (`/admin/config/quant`).
-3. Ensure "track content change" is enabled, and you have each entity enabled that should automatically push to Quant.
+3. Ensure "track content changes" is enabled, and you have each entity enabled that should automatically push to Quant.
 4. Set your server URL to the local webserver loopback address (generally http://localhost), and provide your website domain as the hostname (e.g `www.example.com`)
 5. Navigate to the API tab and enter your account, project, and token details. These can all be found from the [Quant Dashboard](/docs/dashboard/get-started)
 6. You should see a "Successfully connected to ..." message at to the top of the page. If not, check the values under the API tab and try again.
