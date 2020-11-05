@@ -15,5 +15,5 @@ When we detect your DNS has been configured correctly the "DNS engaged" value wi
 HTTPS certificates are automatically created and renewed via our automated process, however if you need to manually trigger a SSL certificate generation (e.g during go-live to minimise SSL errors) then you may click the "Renew" button next to any domain.
 
 :::tip
-Quant will always redirect insecure traffic to HTTPS. For improved security you should consider (enabling HSTS)[/docs/dashboard/custom-http-headers] via the custom headers tool
+Quant will always redirect insecure traffic to HTTPS. For improved security you should consider [enabling HSTS](/docs/dashboard/custom-http-headers) via the custom headers tool
 :::

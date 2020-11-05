@@ -17,7 +17,7 @@ The equivalent can be found for files and media in the "Files & Media" section.
 
 Click on the "View Revisions" button to load the revisions viewer for any piece of content in Quant.
 
-The revisions viewer will allow you to go back in time and view any historic content revision. Metadata values for `log` and `author` will display if they were provided when the content revision was pushed. Similarly if content had a publish schedule attached it will display in the revision detail.
+The revisions viewer will allow you to go back in time and view any historic content revision. Metadata values for `log` and `author_name` will display if they were provided when the content revision was pushed. Similarly if content had a publish schedule attached it will display in the revision detail.
 
 ### Unpublish content
 

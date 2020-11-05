@@ -4,7 +4,7 @@ title: Get started with Quant and Drupal
 sidebar_label: Drupal
 ---
 
-Drupal modules exist for 7, 8, and 9. The codebases are (maintained in Github)[https://www.github.com/quantcdn/drupal]. Please raise issues, feature and pull requests there.
+Drupal modules exist for 7, 8, and 9. The codebases are [maintained in Github](https://www.github.com/quantcdn/drupal). Please raise issues, feature and pull requests there.
 
 ## Setup
 
@@ -19,7 +19,7 @@ Drupal modules exist for 7, 8, and 9. The codebases are (maintained in Github)[h
 
 Seeding or Hydrating is the act of initial population of Quant. This will take all content, media assets, redirects, etc and push into Quant as a one-time action.
 
-Once the initial seed is completed all further content changes will be tracked and pushed to Quant automatically.
+Once the initial seed is completed all further content changes will be tracked and pushed to Quant as required (when it changes).
 
 1. Visit the Seed tab
 2. Select the items you want to push (generally this should be everything).
