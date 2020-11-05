@@ -31,18 +31,8 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/quantcdn',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          href: 'https://quantcdn.io',
+          href: 'https://www.quantcdn.io',
           label: 'quantcdn.io',
-          position: 'right',
-        },
-        {
-          href: 'https://support.quantcdn.io',
-          label: 'Support',
           position: 'right',
         },
       ],
