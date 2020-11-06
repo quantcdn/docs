@@ -21,6 +21,7 @@ module.exports = {
       logo: {
         alt: 'QuantCDN Logo',
         src: 'img/logo.png',
+        href: 'https://www.quantcdn.io',
       },
       items: [
         {
@@ -34,6 +35,7 @@ module.exports = {
           href: 'https://www.quantcdn.io',
           label: 'quantcdn.io',
           position: 'right',
+          css: 'navbar__brand',
         },
       ],
     },

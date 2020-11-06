@@ -65,4 +65,32 @@ To include taxonomies in your facet list simply add any vocabulary machine name 
 
 ## Creating search pages
 
-Search pages can be created to 
+Search pages can be created via the Quant dashboard.
+
+These search pages can generate functional search pages with a single click, allowing customisable facets, content filters, templates and design.
+
+1. Navigate to the "Search" section of the dashboard
+2. Click "Create" under the search pages section
+3. Choose from on of the predefined templates
+4. Enter a search URL, and optional page title/sub-title
+5. Optionally choose facets to include for display
+6. Optionally filter the resultset (see "Filtering" below)
+7. In the design section optionally choose facet position, tag display options, and provide custom CSS
+
+### Search filters
+
+Search filters can be applied to limit the content being displayed on a search page. Use this to restrict the search results to a subset of your content.
+
+You may enter as many filters you like, some examples:
+
+* `content_type:"recipe"`: Restict all results to those with a content type of "recipe"
+* `recipe_category:"Vegetarian" OR recipe_category:"Vegan"`: Restrict all results to recipes that have certain categories/tags assigned
+
+Use a combination of these filters to create dynamic listing pages, or subsets of search results as desired.
+
+
+### Advanced layout/display override
+
+Quant will generate content for any search pages made through the Dashboard.
+
+For complex use cases, or modifying the layout and styling you may edit this content directly from the "Content" section of the dashboard via the Code editor.

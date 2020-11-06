@@ -14,6 +14,7 @@ module.exports = {
       "dashboard/domains",
       "dashboard/alerts",
       "dashboard/custom-http-headers",
+      "dashboard/search",
     ],
     "CLI": [
       "cli/get-started",

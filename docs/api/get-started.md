@@ -17,7 +17,7 @@ curl -H "Quant-Customer: (your account)" -H "Quant-Project: (your project)" -H "
 
 ## Authentication
 
-Quant users bearer tokens for authentication. All requests must specify the `Quant-Token` request header and need to send the value presented in your dashboard. If you haven't created a project head over to your [dashboard](https://dashboard.quantcdn.io) set one up to retrieve your token and start publishing!
+Quant uses bearer tokens for authentication. All requests must specify the `Quant-Token` request header and need to send the value presented in your dashboard. If you haven't created a project head over to your [dashboard](https://dashboard.quantcdn.io) set one up to retrieve your token and start publishing!
 
 To further identify your request you are required to add `Quant-Customer` and `Quant-Project` request headers. These will be validated against the `Quant-Token` to ensure that the request is valid.
 
