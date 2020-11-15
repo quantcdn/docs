@@ -1,7 +1,8 @@
 module.exports = {
   someSidebar: {
-    Home: [
+    "Overview": [
       "welcome",
+      "golive"
     ],
     "Integrations": [
       "integrations/overview",

@@ -4,7 +4,7 @@ title: Using Quant with CI
 sidebar_label: CI pipelines
 ---
 
-CI integration is a key area the CLI tool can assist with. When using a static builder your CI pipeline can be used to build and deploy content automatically as it changes.
+CI integration is a key area the CLI tool can assist with. When using a static generator your CI pipeline can be used to build and deploy content automatically as it changes.
 
 For example, this documentation site is built with (Docusaurus)[https://v2.docusaurus.io/] and deployed to Quant via a (Codefresh)[https://codefresh.io/] CI pipeline.
 

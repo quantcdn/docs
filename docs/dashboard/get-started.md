@@ -26,7 +26,7 @@ The **username and password** options will optionally password protect your proj
 
 Once the project is added you can find it in the "Projects" section of the dashboard.
 
-You will see a preview domain has already been created. Visiting this domain should display a default 404 page until you connect and start pushing content to Quant.
+You will see a preview domain has already been created. Visiting this domain should display a default 404 page until you connect and start pushing content to Quant. Use this preview domain to test and validate your website before [going live](/docs/golive).
 
 Click on the eye icon under "API token" to retrieve the API token and integrate with [Drupal](/docs/integrations/drupal), [Wordpress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
 

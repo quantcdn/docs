@@ -35,4 +35,4 @@ This process will push all files and content that have changed since the previou
 ## Static generators
 Most static generators will work with the CLI tool by their very nature (generation of static assets!)
 
-Quant has been tested with success with Jekyll, Hugo, Hexo, Gatsby, MkDocs, Docusaurus (this site), Pelican, and more. Please [contact us](https://www.quantcdn.io/contact) if you have issues integrating with any existing static builders, we would love to hear from you!
+Quant has been tested with success with Jekyll, Hugo, Hexo, Gatsby, MkDocs, Docusaurus (this site), Pelican, and more. Please [contact us](https://www.quantcdn.io/contact) if you have issues integrating with any existing static generators, we would love to hear from you!

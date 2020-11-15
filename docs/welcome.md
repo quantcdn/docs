@@ -4,7 +4,7 @@ title: Welcome to Quant
 sidebar_label: Welcome
 ---
 
-Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of re-architecting your solution. Quant provides integrations for popular CMS and static builders to ensure your content and development workflows continue without interruption.
+Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of re-architecting your solution. Quant provides integrations for popular CMS and static generators to ensure your content and development workflows continue without interruption.
 
 While the fundamental idea is to ensure a low-barrier to enjoy the many [benefits of static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started) for developers to create their own custom integrations.
 
@@ -23,12 +23,12 @@ Projects are maintained via the [Quant dashboard](/docs/dashboard/get-started).
 
 CMS integrations allow for an initial one-click push of an entire website, as well as ongoing content change tracking and automatically pushing updates to the Quant static edge. These integrations ensure your content is published on Quant the second it changes on your CMS.
 
-* [Drupal] (version 7, 8, 9)
-* [Wordpress] version 5+
+* [Drupal](https://www.drupal.org/project/quantcdn) (version 7, 8, 9)
+* [Wordpress](https://wordpress.org/plugins/quant/) version 5+
 
-### Popular static web builders
+### Popular static web generators
 
-Popular static web builders operate by deploying compiled assets (markup, javascript, css, images, etc) in a bundle.
+Popular static web builders operate by generating compiled assets (markup, javascript, css, images, etc) as files on disk, ready for deployment to QuantCDN.
 
 Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [CI build pipeline](/docs/cli/continuous-integration).
 

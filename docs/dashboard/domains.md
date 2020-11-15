@@ -4,11 +4,11 @@ title: Adding your domain to Quant
 sidebar_label: Domains and SSL
 ---
 
-The 'Domains' section of the dashboard will show all domains currently attached to the currently active project.
+The "Domains" section of the dashboard will show all domains currently attached to the currently active project.
 
-To add or edit domains click the 'Edit domains button' in the upper right.
+To add or edit domains click the "Edit domains button" in the upper right.
 
-When "Basic Auth" is enabled the domain will be protected from public access via username and password. This is set on a project level rather than per-domain, click the 'edit domains' button to alter.
+When "Basic Auth" is enabled the domain will be protected from public access via username and password. This is set on a project level rather than per-domain, click the "edit domains" button to alter.
 
 When we detect your DNS has been configured correctly the "DNS engaged" value will be "Yes".
 
