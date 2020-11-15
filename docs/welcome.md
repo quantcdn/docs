@@ -23,8 +23,8 @@ Projects are maintained via the [Quant dashboard](/docs/dashboard/get-started).
 
 CMS integrations allow for an initial one-click push of an entire website, as well as ongoing content change tracking and automatically pushing updates to the Quant static edge. These integrations ensure your content is published on Quant the second it changes on your CMS.
 
-* [Drupal](https://www.drupal.org/project/quantcdn) (version 7, 8, 9)
-* [Wordpress](https://wordpress.org/plugins/quant/) version 5+
+* [Drupal](/docs/integrations/drupal) (version 7, 8, 9)
+* [Wordpress](/docs/integrations/wordpress) version 5+
 
 ### Popular static web generators
 
