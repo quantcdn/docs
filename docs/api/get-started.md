@@ -54,7 +54,7 @@ curl -X POST https://api.quantcdn.io/v1 -d @./payload.json
   "url": "/",
   "published": true,
   "info": {
-    "author": "Joe Static",
+    "author_name": "Joe Static",
     "log": "Revision log message"
   }
 }

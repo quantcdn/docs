@@ -24,8 +24,8 @@ module.exports = {
     ],
     "API": [
       "api/get-started",
+      "api/search",
       "api/client-workflow"
     ],
-
   },
 };
