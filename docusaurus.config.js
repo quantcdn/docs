@@ -24,13 +24,11 @@ module.exports = {
         href: 'https://www.quantcdn.io',
       },
       items: [
-        {
-          to: 'docs/welcome',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
-        },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/welcome', label: 'Overview', position: 'left'},
+        {to: 'docs/integrations/overview', label: 'Integrations', position: 'left'},
+        {to: 'docs/dashboard/get-started', label: 'Dashboard', position: 'left'},
+        {to: 'docs/cli/get-started', label: 'CLI', position: 'left'},
+        {to: 'docs/api/get-started', label: 'API', position: 'left'},
         {
           href: 'https://www.quantcdn.io',
           label: 'quantcdn.io',
