@@ -40,18 +40,14 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  build_deploy:
     jobs:
       - build
-    branches:
-      ignore:
-        - develop
-        - master
-  deploy:
-    jobs:
-      - build
-      - deploy
-    branches:
-      only:
-        - develop
-        - master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - develop
+                - master
