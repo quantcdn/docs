@@ -16,11 +16,11 @@ jobs:
 
       - run:
           name: Initialise Quant
-          command: node_modules/@quantcdn/quant-cli/cli.js init -c ${QUANT_CUSTOMER} -t '${QUANT_TOKEN}' --project=${QUANT_PROJECT} -e '${QUANT_ENDPOINT}' -d build
+          command: node node_modules/@quantcdn/quant-cli/cli.js init -c ${QUANT_CUSTOMER} -t '${QUANT_TOKEN}' --project=${QUANT_PROJECT} -e '${QUANT_ENDPOINT}' -d build
 
       - run:
           name: Check Quant config
-          command: node_modules/@quantcdn/quant-cli/cli.js info
+          command: node node_modules/@quantcdn/quant-cli/cli.js info
 
       - save_cache:
           key: docs-{{ checksum "package-lock.json" }}
