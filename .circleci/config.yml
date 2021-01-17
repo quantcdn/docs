@@ -14,8 +14,6 @@ jobs:
           name: Docsaurus build.
           command: yarn build
 
-      - run: apt-get install vim
-
       - run:
           name: Initialise Quant
           command: node_modules/@quantcdn/quant-cli/cli.js init -c ${QUANT_CUSTOMER} -t '${QUANT_TOKEN}' --project=${QUANT_PROJECT} -e '${QUANT_ENDPOINT}' -d build
