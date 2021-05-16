@@ -13,7 +13,8 @@ The static web offers many benefits over traditional web hosting. We offer turnk
 * Support for files/media
 * Redirects support
 * Scheduled content release
-* Automatic, seamless integrated [Search](/docs/dashboard/search)
+* Seamlessly integrated [Search](/docs/dashboard/search)
+* [Forms](/docs/dashboard/forms) support
 * ... much more!
 
 Get started with either [Drupal](/docs/integrations/drupal) or [Wordpress](/docs/integrations/wordpress).

@@ -16,6 +16,11 @@ module.exports = {
     //  appId: '',
     //  algoliaOptions: {}, // Optional, if provided by Algolia
     //},
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'QuantCDN',
       logo: {

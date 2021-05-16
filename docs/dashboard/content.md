@@ -38,11 +38,11 @@ The WYSIWYG editor (built with [Grapes.js](https://github.com/artf/grapesjs)) at
 
 If the content is too complex, or this process fails, then please use the Code editor.
 
-Simply click on any element in the page to edit. Text can be edited directly, and attributes such as classes, id, and simple style options (width, margin, padding, font, etc) can be edited using hte panel on the right.
+Simply click on any element in the page to edit. Text can be edited directly, and attributes such as classes, id, and simple style options (width, margin, padding, font, etc) can be edited using the panel on the right.
 
 For finer grained control you can edit the markup directly by clicking the "Edit Code" button in the top toolbar.
 
-Once you are happy with content change click the "Save" icon.
+Once you are happy with content change click the "Save" icon and provide a path for the content .
 
 :::tip
 You can create an entirely new page by editing a page, then enter a new URL after clicking the "Save" button. This is especially useful when you have content templates to use as a base.
