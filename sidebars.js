@@ -2,7 +2,8 @@ module.exports = {
   someSidebar: {
     "Overview": [
       "welcome",
-      "golive"
+      "golive",
+      "custom-404"
     ],
     "Integrations": [
       "integrations/overview",
@@ -13,9 +14,11 @@ module.exports = {
       "dashboard/get-started",
       "dashboard/content",
       "dashboard/domains",
+      "dashboard/authentication",
       "dashboard/alerts",
       "dashboard/custom-http-headers",
       "dashboard/search",
+      "dashboard/forms",
     ],
     "CLI": [
       "cli/get-started",

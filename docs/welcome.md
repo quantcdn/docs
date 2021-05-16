@@ -32,8 +32,22 @@ Popular static web builders operate by generating compiled assets (markup, javas
 
 Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [CI build pipeline](/docs/cli/continuous-integration).
 
+### Forms
+
+Webforms are a common challenge when moving to the static web. Quant has a powerful, embedded solution that is simple to enable.
+
+[Read more about setting up QuantForms](/docs/dashboard/forms).
+
+### Search
+
+Our seamless search solution allows content to automatically index and remain in sync as it changes.
+
+Create structured search records and build faceted search pages with ease.
+
+[Read more about setting up QuantSearch](/docs/dashboard/search).
+
 ### Domains and TLS
-[Add an existing domain](/docs/dashboard/domains) to Quant to assign a custom domain to your site. We provide free automatic SSL certificates via LetsEncrypt.
+[Add an existing domain](/docs/dashboard/domains) to Quant to assign a custom domain to your site. We provide free automatic SSL certificates via [Let's Encrypt](https://letsencrypt.org/).
 
 
 ## Developers

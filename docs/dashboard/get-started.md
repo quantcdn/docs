@@ -8,6 +8,8 @@ sidebar_label: Get started
 
 The Quant Dashboard provides a place to centrally manage projects and content, view revision history and provide access to your team (organisation subscriptions only).
 
+![Quant Dashboard](/img/quant-dashboard-overview.jpg)
+
 [Register for an account](https://dashboard.quantcdn.io/register) to get started.
 
 ## Create your first project
@@ -20,7 +22,9 @@ The **domains** field is where you can input any domains the site will respond o
 
 The **query parameters** option will allow URLs to be made unique by query parameter (for example `/blog?page-2`). This is enabled by default.
 
-The **username and password** options will optionally password protect your project.
+The **username and password** options will optionally password protect your project. See [authentication](/docs/dashboard/authentication) for more details.
+
+The **enable search** option will enable [Quant Search](/docs/dashboard/search) for the project.
 
 ## Next steps
 
@@ -28,7 +32,7 @@ Once the project is added you can find it in the "Projects" section of the dashb
 
 You will see a preview domain has already been created. Visiting this domain should display a default 404 page until you connect and start pushing content to Quant. Use this preview domain to test and validate your website before [going live](/docs/golive).
 
-Click on the eye icon under "API token" to retrieve the API token and integrate with [Drupal](/docs/integrations/drupal), [Wordpress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
+Visit the "Integrations" section to get started. Integrate with [Drupal](/docs/integrations/drupal), [Wordpress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
 
 ## Change active organisation or project
 
