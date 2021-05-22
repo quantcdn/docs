@@ -16,6 +16,18 @@ Wordpress is the most popular CMS on the planet. Quant offers a one-click soluti
 6. You should see a "Successfully made a connection to Quant" message at to the top of the page upon saving settings. If not, check the values under the API section and try again.
 7. Navigate to the "Seed Settings" tab and tick the "theme assets" box. Click "Save Settings" and you're ready to go!
 
+### Contact Form 7 support
+
+If you use Contact Form 7 and intend on using the [Quant Forms](/docs/dashboard/forms) solution you need to make a small [configuration tweak](/docs/dashboard/forms#contact-form-7-support-wordpress).
+
+### Elementor support
+
+Elementor is a popular drag and drop layout and page manager for Wordpress. Elementor has been tested thoroughly and works well with Quant. Make the following configuration change for best results:
+
+1. Navigate to the advanced Elementor settings page on your Wordpress installation (Elementor > Settings > Advanced)
+2. Change the "CSS Print Method" dropdown to "Internal Embedding"
+
+
 ## Preparing the initial seed
 
 Seeding or Hydrating is the act of initial population of Quant. This will take all content, media assets, redirects, etc and push into Quant as a one-time action.
@@ -38,4 +50,6 @@ If you have made sweeping, site-wide change then a re-seed may be required. This
 - Global look and feel changes (e.g Theme)
 - Global IA change (e.g links in navigation)
 
+## Go-live setup
 
+Ready to start serving traffic via Quant? Great! Follow the [standard go-live process](/docs/golive) to change DNS records.
