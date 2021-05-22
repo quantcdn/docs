@@ -31,3 +31,7 @@ Once the initial seed is completed all further content changes will be tracked a
 If you have made sweeping, site-wide change then a re-seed may be required. This could be in the following situations:
 - Global look and feel changes (e.g Theme)
 - Global IA change (e.g links in navigation)
+
+## Go-live setup
+
+Ready to start serving traffic via Quant? Great! Follow the [standard go-live process](/docs/golive) to change DNS records.

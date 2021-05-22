@@ -17,3 +17,38 @@ Assuming you have already [created a project](/docs/welcome) and populated with 
 :::tip
 If you are unsure about DNS values, where to change, or generally need support with the go-live process please contact support via your Quant Dashboard.
 :::
+
+## Maintaining access to your CMS
+
+Once you have moved public traffic to Quant one issue remains: How to retain access to your Wordpress or Drupal site for ongoing content authoring and administration.
+
+Generally the simplest thing to do is move your CMS to a separate domain.
+
+### Wordpress
+
+Set your new Wordpress CMS domain in your `wp-config.php` file as below, or follow the [Wordpress.org guide](https://wordpress.org/support/article/changing-the-site-url/) for more options.
+
+```
+define( 'WP_HOME', 'https://wordpress.example.com' );
+define( 'WP_SITEURL', 'https://wordpress.example.com' );
+```
+
+### Drupal
+
+Ensure your CMS domain is included in your Drupal `settings.php` file (`trusted_host_patterns` array). For example:
+```
+$settings['trusted_host_patterns'] = [
+  // Public URLs.
+  '^www\.quantcdn\.io$',
+  '^quantcdn\.io$',
+  // Editorial / admin domain.
+  '^edit\.quantcdn\.io$'
+];
+```
+
+For more detail see the [Drupal.org page](https://www.drupal.org/docs/installing-drupal/trusted-host-settings).
+
+
+:::tip
+For improved security choose a highly randomised CMS domain, put behind basic auth, or move to a private network. You have much greater control over access once you use Quant to serve requests.
+:::
