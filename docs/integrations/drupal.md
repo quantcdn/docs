@@ -29,6 +29,8 @@ Once the initial seed is completed all further content changes will be tracked a
 :::tip
 If you wish to push all historic node revisions select the "Nodes (revision history)" option.
 For best results is is recommended you run this queue *first*, followed by the "Nodes" option to push current/published revisions.
+
+Historic revisions only need pushing once. For best results you may wish to limit historic revision seeding to a single thread.
 :::
 
 ### Threaded queue processor
