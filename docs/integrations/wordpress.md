@@ -1,14 +1,14 @@
 ---
 id: wordpress
-title: Get started with Quant and Wordpress
-sidebar_label: Wordpress
+title: Get started with Quant and WordPress
+sidebar_label: WordPress
 ---
 
-Wordpress is the most popular CMS on the planet. Quant offers a one-click solution for integration.
+WordPress is the most popular CMS on the planet. Quant offers a one-click solution for integration.
 
 ## Setup
 
-1. Download the Plugin from [Wordpress](https://wordpress.org/plugins/quantcdn), or install from the admin UI.
+1. Download the Plugin from [WordPress](https://wordpress.org/plugins/quantcdn), or install from the admin UI.
 2. Visit the Settings > QuantCDN admin page, and click the "Settings" tab
 3. Ensure "Enable QuantCDN integration" is enabled
 4. Set your webserver URL to the local webserver loopback address (generally http://localhost), and provide your website domain as the hostname (e.g `www.example.com`)
@@ -22,9 +22,9 @@ If you use Contact Form 7 and intend on using the [Quant Forms](/docs/dashboard/
 
 ### Elementor support
 
-Elementor is a popular drag and drop layout and page manager for Wordpress. Elementor has been tested thoroughly and works well with Quant. Make the following configuration change for best results:
+Elementor is a popular drag and drop layout and page manager for WordPress. Elementor has been tested thoroughly and works well with Quant. Make the following configuration change for best results:
 
-1. Navigate to the advanced Elementor settings page on your Wordpress installation (Elementor > Settings > Advanced)
+1. Navigate to the advanced Elementor settings page on your WordPress installation (Elementor > Settings > Advanced)
 2. Change the "CSS Print Method" dropdown to "Internal Embedding"
 
 
