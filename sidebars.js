@@ -7,7 +7,15 @@ module.exports = {
     ],
     "Integrations": [
       "integrations/overview",
-      "integrations/drupal",
+      {
+        type: 'category',
+        label: 'Drupal',
+        items: [
+          'integrations/drupal',
+          'integrations/drupal/seed',
+          'integrations/drupal/drupal-cron'
+        ],
+      },
       "integrations/wordpress",
     ],
     "Dashboard": [
@@ -19,6 +27,7 @@ module.exports = {
       "dashboard/custom-http-headers",
       "dashboard/search",
       "dashboard/forms",
+      "dashboard/s3-sync",
     ],
     "CLI": [
       "cli/get-started",
