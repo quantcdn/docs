@@ -23,6 +23,7 @@ module.exports = {
       "dashboard/content",
       "dashboard/domains",
       "dashboard/authentication",
+      "dashboard/page-rules",
       "dashboard/alerts",
       "dashboard/custom-http-headers",
       "dashboard/search",
