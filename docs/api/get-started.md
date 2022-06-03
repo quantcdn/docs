@@ -9,7 +9,7 @@ sidebar_label: Get started
 
 All API requests must be directed to the `https://api.quantcdn.io/v1/`. The path is prefixed with the API version. If backwards-breaking changed are introduced into the API the version number will be bumped, old versions of the API will be maintained and deprecated with plenty of notice. You will need to add specific headers to each request to ensure that the API endpoint can correctly identify you.
 
-In CURL a request will look like;
+In curl a request will look like;
 
 ```
 curl -H "Quant-Customer: (your account)" -H "Quant-Project: (your project)" -H "Quant-Token: (your token)" https://api.quantcdn.io/v1/ping
