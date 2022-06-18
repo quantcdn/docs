@@ -1,5 +1,4 @@
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/quantcdn/QuantCDN%2Fquant-docs?key=eyJhbGciOiJIUzI1NiJ9.NWU5ZDVmZmE1MWJmOTZjYTU0NWRiNTBk.2vLiCtkYTfWcwAbwbzuL5KlwSrZRXetNTXgpWn5ZMag&type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpipelines%2Fquant-docs%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5e9d6314ea5ddb6d218cf67d~quant-docs)
-
+![CI build & deploy](https://github.com/quantcdn/docs/actions/workflows/deploy.yml/badge.svg)
 
 # QuantCDN developer docs
 
@@ -11,7 +10,7 @@ Built docs are automatically deployed to QuantCDN using [quant-cli](https://gith
 ### Installation
 
 ```
-$ yarn
+$ yarn install
 ```
 
 ### Local Development
@@ -28,7 +27,7 @@ This command starts a local development server and open up a browser window. Mos
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This command generates static content into the `build` directory and can be served using any static contents hosting service. You can validate by serving the files locally with `yarn serve`.
 
 ### Deployment
 
