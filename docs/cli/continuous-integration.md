@@ -6,7 +6,7 @@ sidebar_label: CI pipelines
 
 CI integration is a key area the CLI tool can assist with. When using a static generator your CI pipeline can be used to build and deploy content automatically as it changes.
 
-For example, this documentation site is built with (Docusaurus)[https://v2.docusaurus.io/] and deployed to Quant via a (Codefresh)[https://codefresh.io/] CI pipeline.
+For example, this documentation site is built with (Docusaurus)[https://v2.docusaurus.io/] and deployed to Quant via a (GitHub Actions)[https://github.com/marketplace/actions/deploy-to-quantcdn] CI pipeline. You can (view the code)[https://github.com/quantcdn/docs/blob/develop/.github/workflows/deploy.yml] in our public repository.
 
 Simply initialise Quant with a one-liner to prevent interactive setup with environment variables, e.g:
 ```
