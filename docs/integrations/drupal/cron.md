@@ -1,10 +1,10 @@
 ---
 id: drupal-cron
-title: Using drupal_cron
+title: Using quant_cron
 sidebar_label: Cron setup
 ---
 
-The optional `drupal_cron` submodule allows for selective content push whenever cron runs. This can be useful to ensure certain routes are always kept fresh, especially those that contain dynamic elements not accounted for in content change tracking.
+The optional `quant_cron` submodule allows for selective content push whenever cron runs. This can be useful to ensure certain routes are always kept fresh, especially those that contain dynamic elements not accounted for in content change tracking.
 
 ## Setup
 
