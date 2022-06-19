@@ -53,9 +53,9 @@ jobs:
       - name: Deploy updates to QuantCDN
         uses: quantcdn/deploy-action@v1.3.1
         with:
-          customer: ${{ env.QUANT_CUSTOMER }}
-          project: ${{ env.QUANT_PROJECT }}
-          token: ${{ env.QUANT_TOKEN }}
+          customer: "${{ env.QUANT_CUSTOMER }}"
+          project: "${{ env.QUANT_PROJECT }}"
+          token: "${{ env.QUANT_TOKEN }}"
           dir: build
           chunk-size: 20
           skip-purge: true
@@ -63,7 +63,7 @@ jobs:
       - name: Purge the QuantCDN cache
         uses: quantcdn/purge-action@v1.2.0
         with:
-          customer: ${{ env.QUANT_CUSTOMER }}
-          project: ${{ env.QUANT_PROJECT }}
-          token: ${{ env.QUANT_TOKEN }}
+          customer: "${{ env.QUANT_CUSTOMER }}"
+          project: "${{ env.QUANT_PROJECT }}"
+          token: "${{ env.QUANT_TOKEN }}"
           url_pattern: "/*"
