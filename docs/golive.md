@@ -20,13 +20,13 @@ If you are unsure about DNS values, where to change, or generally need support w
 
 ## Maintaining access to your CMS
 
-Once you have moved public traffic to Quant one issue remains: How to retain access to your Wordpress or Drupal site for ongoing content authoring and administration.
+Once you have moved public traffic to Quant one issue remains: How to retain access to your WordPress or Drupal site for ongoing content authoring and administration.
 
 Generally the simplest thing to do is move your CMS to a separate domain.
 
-### Wordpress
+### WordPress
 
-Set your new Wordpress CMS domain in your `wp-config.php` file as below, or follow the [Wordpress.org guide](https://wordpress.org/support/article/changing-the-site-url/) for more options.
+Set your new WordPress CMS domain in your `wp-config.php` file as below, or follow the [WordPress.org guide](https://wordpress.org/support/article/changing-the-site-url/) for more options.
 
 ```
 define( 'WP_HOME', 'https://wordpress.example.com' );

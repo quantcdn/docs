@@ -16,7 +16,7 @@ The `Content-Security-Policy` header can be used to define which sources are app
 
 While CSP controls what may run on the website itself, the CORS header `Access-Control-Allow-Origin` prevents content being accessed or embedded on other hosts.
 
-This can prevent your content being embedded in iFrames or hotlinked on external sites.
+This can prevent your content being embedded in IFrames or hotlinked on external sites.
 
 ## HTTP Strict Transport Security (HSTS)
 

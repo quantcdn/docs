@@ -8,7 +8,7 @@ sidebar_label: Search
 
 Quant Search is an optional service that will allow you to create and maintain search pages with minimal effort.
 
-When search is enabled on a project all content change will automatically be tracked in the search index. Similary when content is unpublished or deleted it will be removed from the index.
+When search is enabled on a project all content change will automatically be tracked in the search index. Similarly when content is unpublished or deleted it will be removed from the index.
 
 ## Search subscription
 
@@ -43,13 +43,13 @@ If you need assistance configuring xpath selectors for your site, please contact
 
 ### Faceting
 
-If you are using the Drupal or Wordpress plugins Quant will automatically know about tags, categories, content type and custom taxonomy terms attached to content.
+If you are using the Drupal or WordPress plugins Quant will automatically know about tags, categories, content type and custom taxonomy terms attached to content.
 
 This can be used to expose facets (user-selectable filters) on your search pages.
 
-#### Wordpress
+#### WordPress
 
-Wordpress will automatically populate the following:
+WordPress will automatically populate the following:
 
 * `tags`
 * `categories`
@@ -74,7 +74,7 @@ These search pages can generate functional search pages with a single click, all
 3. Choose from on of the predefined templates
 4. Enter a search URL, and optional page title/sub-title
 5. Optionally choose facets to include for display
-6. Optionally filter the resultset (see "Filtering" below)
+6. Optionally filter the result set (see "Filtering" below)
 7. In the design section optionally choose facet position, tag display options, and provide custom CSS
 
 ### Search filters
@@ -83,7 +83,7 @@ Search filters can be applied to limit the content being displayed on a search p
 
 You may enter as many filters you like, some examples:
 
-* `content_type:"recipe"`: Restict all results to those with a content type of "recipe"
+* `content_type:"recipe"`: Restrict all results to those with a content type of "recipe"
 * `recipe_category:"Vegetarian" OR recipe_category:"Vegan"`: Restrict all results to recipes that have certain categories/tags assigned
 
 Use a combination of these filters to create dynamic listing pages, or subsets of search results as desired.
