@@ -6,7 +6,7 @@ sidebar_label: Customise 404 page
 
 Custom 404 pages are easy with Quant. Any content pushed to QuantCDN with the special `/_quant404` route will become the active 404 page.
 
-## Wordpress
+## WordPress
 
 1. Set the 404 page in QuantCDN settings (Settings > QuantCDN) - for example `/path/to/404-page`.
 2. Ensure the 404 page is pushed into Quant (Batches > Custom routes and 404 page)

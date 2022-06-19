@@ -69,14 +69,14 @@ Simply add a container to your page with an attribute: `id="quant-form-result"`.
 ```
 
 
-## Contact Form 7 support (Wordpress)
+## Contact Form 7 support (WordPress)
 
 Contact Form 7 posts values via AJAX by default. The response from Quant is not as CF7 expects, so an error is received.
 
-To resolve simply disable the submission via javascript in Wordpress by adding the following to your `wp-config.php` file:
+To resolve simply disable the submission via JavaScript in WordPress by adding the following to your `wp-config.php` file:
 ```
 define ( 'WPCF7_LOAD_JS', false );
 ```
 
-Push your form content from Wordpress to Quant after making this change.
+Push your form content from WordPress to Quant after making this change.
 

@@ -32,7 +32,7 @@ Once the project is added you can find it in the "Projects" section of the dashb
 
 You will see a preview domain has already been created. Visiting this domain should display a default 404 page until you connect and start pushing content to Quant. Use this preview domain to test and validate your website before [going live](/docs/golive).
 
-Visit the "Integrations" section to get started. Integrate with [Drupal](/docs/integrations/drupal), [Wordpress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
+Visit the "Integrations" section to get started. Integrate with [Drupal](/docs/integrations/drupal), [WordPress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
 
 ## Change active organisation or project
 

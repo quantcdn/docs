@@ -32,9 +32,9 @@ In some instances you may wish to create or edit content directly via the Quant 
 
 From here you have two options: WYSIWYG or Code editor.
 
-### Using the WYSWIWYG editor
+### Using the WYSIWYG editor
 
-The WYSIWYG editor (built with [Grapes.js](https://github.com/artf/grapesjs)) attempts to load all assets in a full visual representation. This process may not be perfect, it is likely to fail if the page has a lot of javascript requirements that do not render correctly in the inline frame.
+The WYSIWYG editor (built with [Grapes.js](https://github.com/artf/grapesjs)) attempts to load all assets in a full visual representation. This process may not be perfect, it is likely to fail if the page has a lot of JavaScript requirements that do not render correctly in the inline frame.
 
 If the content is too complex, or this process fails, then please use the Code editor.
 
