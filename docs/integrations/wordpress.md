@@ -31,6 +31,18 @@ Elementor is a popular drag and drop layout and page manager for WordPress. Elem
 1. Navigate to the advanced Elementor settings page on your WordPress installation (Elementor > Settings > Advanced)
 2. Change the "CSS Print Method" dropdown to "Internal Embedding"
 
+### Divi Builder support
+
+If using the Divi Builder plugin you should disable "Minify And Combine Javascript Files" and "Minify And Combine CSS Files".
+
+These options can lead to absolute references in CSS files which break when serving content via Quant.
+
+### Redirects support
+
+The popular [Redirection](https://wordpress.org/plugins/redirection/) plugin provides a mechanism for managing redirects in Wordpress. If this plugin is enabled you will see a "Redirects" batch.
+
+Only standard URL redirects are supported (e.g no regex or other complex redirects).
+
 ### CSS/JS Aggregation plugins
 
 You may have issues with optimization modules depending on your configuration. If your site looks broken after the seed please try again with modules such a Page Optimize and Autoptmize disabled.
