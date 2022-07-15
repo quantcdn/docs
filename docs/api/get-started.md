@@ -12,7 +12,7 @@ All API requests must be directed to the `https://api.quantcdn.io/v1/`. The path
 In curl a request will look like;
 
 ```
-curl -H "Quant-Customer: (your account)" -H "Quant-Project: (your project)" -H "Quant-Token: (your token)" https://api.quantcdn.io/v1/ping
+curl -H "Quant-Customer: (example-customer)" -H "Quant-Project: (example-project)" -H "Quant-Token: (project-token)" https://api.quantcdn.io/v1/ping
 ```
 
 ## Authentication

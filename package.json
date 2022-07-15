@@ -6,15 +6,14 @@
     "start": "docusaurus start",
     "serve": "docusaurus serve",
     "build": "docusaurus build",
-    "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "quant": "quant"
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^0.10.0",
-    "@docusaurus/core": "^2.0.0-alpha.50",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.50",
+    "@docusaurus/core": "^2.0.0-rc.1",
+    "@docusaurus/preset-classic": "^2.0.0-rc.1",
     "@quantcdn/quant-cli": "^1.0.1",
     "classnames": "^2.2.6",
     "react": "^16.8.4",
