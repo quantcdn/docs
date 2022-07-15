@@ -4,7 +4,7 @@ title: Integrations overview
 sidebar_label: Get started
 ---
 
-The static web offers many benefits over traditional web hosting. We offer turnkey solutions for both Drupal and Wordpress that manage the setup process, including:
+The static web offers many benefits over traditional web hosting. We offer turnkey solutions for both Drupal and WordPress that manage the setup process, including:
 
 * Initial site seed/hydration
 * Support for content workflows
@@ -17,6 +17,6 @@ The static web offers many benefits over traditional web hosting. We offer turnk
 * [Forms](/docs/dashboard/forms) support
 * ... much more!
 
-Get started with either [Drupal](/docs/integrations/drupal) or [Wordpress](/docs/integrations/wordpress).
+Get started with either [Drupal](/docs/integrations/drupal) or [WordPress](/docs/integrations/wordpress).
 
 If you are already using a static generator then integrate with the [CLI tool](/docs/cli/get-started).

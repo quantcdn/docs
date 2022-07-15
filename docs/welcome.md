@@ -24,11 +24,11 @@ Projects are maintained via the [Quant dashboard](/docs/dashboard/get-started).
 CMS integrations allow for an initial one-click push of an entire website, as well as ongoing content change tracking and automatically pushing updates to the Quant static edge. These integrations ensure your content is published on Quant the second it changes on your CMS.
 
 * [Drupal](/docs/integrations/drupal) (version 7, 8, 9)
-* [Wordpress](/docs/integrations/wordpress) version 5+
+* [WordPress](/docs/integrations/wordpress) version 5+
 
 ### Popular static web generators
 
-Popular static web builders operate by generating compiled assets (markup, javascript, css, images, etc) as files on disk, ready for deployment to QuantCDN.
+Popular static web builders operate by generating compiled assets (markup, JavaScript, CSS, images, etc) as files on disk, ready for deployment to QuantCDN.
 
 Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [CI build pipeline](/docs/cli/continuous-integration).
 

@@ -4,7 +4,7 @@ title: Get started with Quant and Drupal
 sidebar_label: Initial setup
 ---
 
-Drupal modules exist for 7, 8, and 9. The codebases are [maintained in Github](https://www.github.com/quantcdn/drupal). Please raise issues, feature and pull requests there.
+Drupal modules exist for 7, 8, and 9. The codebases are [maintained in GitHub](https://www.github.com/quantcdn/drupal). Please raise issues, feature and pull requests there.
 
 ## Setup
 

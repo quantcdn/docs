@@ -23,7 +23,7 @@ To further identify your request you are required to add `Quant-Customer` and `Q
 
 ## Pagination
 
-Requests that return multiple items will be paginated to 100 items by default. You can specify the `page` query parameter to iterate through the result set. You can also change the number returned by quant with the `per_page` parameter.
+Requests that return multiple items will be paginated to 100 items by default. You can specify the `page` query parameter to iterate through the result set. You can also change the number returned by Quant with the `per_page` parameter.
 
 Paginated API endpoints will return data under a `records` key.
 
@@ -36,7 +36,7 @@ Paginated result sets will include metadata to help identify how many results ar
 The most common API action is sending content, either new content or a content revision. Quant supports two types of files;
 
 - HTML (markup)[#sending-markup] as pages
-- Accompanying (assets)[#sending-assets] like images, javascript and stylesheets
+- Accompanying (assets)[#sending-assets] like images, JavaScript and stylesheets
 
 Quant is based on atomic deployments, each time a file changes Quant treats it as if a new file was submitted to the API. This allows Quant to show point in-time representations of any asset that has been sent to Quant.
 
@@ -81,7 +81,7 @@ This approach is useful for machine-readable content that is not markup. It allo
 
 ### Sending assets
 
-The second part to a web page is all the assets that help provide the visual experience. This includes images, javascript, stylesheets, video files and all other static assets. Files are sent as multipart uploads directly to the Quant API. Quant will handle inspecting and creating revisions of the assets.
+The second part to a web page is all the assets that help provide the visual experience. This includes images, JavaScript, stylesheets, video files and all other static assets. Files are sent as multipart uploads directly to the Quant API. Quant will handle inspecting and creating revisions of the assets.
 
 To add a URL for the file you need to specify the `Quant-File-Url` header.
 
@@ -165,7 +165,7 @@ curl -X PATCH -H "Quant-Url: /content" https://api.quantcdn.io/publish/123
 
 `POST /redirect` creates a redirect.
 
-This allows you to redirect one path to another when Quant is serving pages. You can control the status code that quant serve when you create this redirect.
+This allows you to redirect one path to another when Quant is serving pages. You can control the status code that Quant serve when you create this redirect.
 
 ```json
 {
