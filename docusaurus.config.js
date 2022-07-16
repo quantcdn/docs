@@ -69,18 +69,14 @@ module.exports = {
                         {
                             label: 'CLI',
                             to: 'docs/cli/get-started',
-                        },
-                        {
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/quant',
-                        },
+                        }
                     ],
                 },
                 {
                     title: 'Social',
                     items: [{
                             label: 'Blog',
-                            to: 'blog',
+                            to: 'https://www.quantcdn.io/blog',
                         },
                         {
                             label: 'GitHub',
