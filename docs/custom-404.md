@@ -1,7 +1,7 @@
 ---
 slug: custom-404
 title: Create custom 404 error page
-sidebar_label: Customise 404 page
+sidebar_label: Customize 404 page
 ---
 
 Custom 404 pages are easy with Quant. Any content pushed to QuantCDN with the special `/_quant404` route will become the active 404 page.

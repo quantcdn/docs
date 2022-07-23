@@ -11,7 +11,7 @@ WordPress is the most popular CMS on the planet. Quant offers a one-click soluti
 1. Download the Plugin from [WordPress](https://wordpress.org/plugins/quantcdn), or install from the admin UI.
 2. Visit the Settings > QuantCDN admin page, and click the "Settings" tab
 3. Ensure "Enable QuantCDN integration" is enabled
-4. Set your webserver URL to the local webserver loopback address (generally http://localhost), and provide your website domain as the hostname (e.g `www.example.com`)
+4. Set your webserver URL to the local webserver loop-back address (generally http://localhost), and provide your website domain as the hostname (e.g `www.example.com`)
 5. Under the API section enter your account, project, and token details. These can all be found from the [Quant Dashboard](/docs/dashboard/get-started)
 6. You should see a "Successfully made a connection to Quant" message at to the top of the page upon saving settings. If not, check the values under the API section and try again.
 7. Navigate to the "Seed Settings" tab and tick the "theme assets" box. Click "Save Settings" and you're ready to go!
@@ -22,7 +22,15 @@ Quant works just fine with sites hosted on Wordpress.com. Simply ensure the Webs
 
 ### Contact Form 7 support
 
-If you use Contact Form 7 and intend on using the [Quant Forms](/docs/dashboard/forms) solution you need to make a small [configuration tweak](/docs/dashboard/forms#contact-form-7-support-wordpress).
+Contact Form 7 posts values via AJAX by default. The response from Quant is not as CF7 expects, so an error is received.
+
+To resolve simply disable the submission via JavaScript in WordPress by adding the following to your `wp-config.php` file:
+```
+define ( 'WPCF7_LOAD_JS', false );
+```
+
+Push your form content from WordPress to Quant after making this change.
+
 
 ### Elementor support
 
@@ -33,7 +41,7 @@ Elementor is a popular drag and drop layout and page manager for WordPress. Elem
 
 ### Divi Builder support
 
-If using the Divi Builder plugin you should disable "Minify And Combine Javascript Files" and "Minify And Combine CSS Files".
+If using the Divi Builder plugin you should disable "Minify And Combine JavaScript Files" and "Minify And Combine CSS Files".
 
 These options can lead to absolute references in CSS files which break when serving content via Quant.
 

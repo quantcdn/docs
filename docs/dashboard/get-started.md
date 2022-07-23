@@ -6,7 +6,7 @@ sidebar_label: Get started
 
 ## Overview
 
-The Quant Dashboard provides a place to centrally manage projects and content, view revision history and provide access to your team (organisation subscriptions only).
+The Quant Dashboard provides a place to centrally manage projects and content, view revision history and provide access to your team (organization subscriptions only).
 
 ![Quant Dashboard](/img/quant-dashboard-overview.jpg)
 
@@ -34,8 +34,8 @@ You will see a preview domain has already been created. Visiting this domain sho
 
 Visit the "Integrations" section to get started. Integrate with [Drupal](/docs/integrations/drupal), [WordPress](/docs/integrations/wordpress) or any number of popular [static generators](/docs/cli/get-started).
 
-## Change active organisation or project
+## Change active organization or project
 
-Your account may be a member of one or many organisations. Click on your profile icon (upper right) to switch between organisations or your own private account.
+Your account may be a member of one or many organizations. Click on your profile icon (upper right) to switch between organizations or your own private account.
 
-Projects are scoped to organisations. Once you have activated an organisation the projects list (upper left) can be used to toggle the active project.
+Projects are scoped to organizations. Once you have activated an organization the projects list (upper left) can be used to toggle the active project.

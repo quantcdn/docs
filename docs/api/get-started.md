@@ -60,7 +60,7 @@ curl -X POST https://api.quantcdn.io/v1 -d @./payload.json
 }
 ```
 
-The Quant API will scan your markup and identify assets. It will respond to your request with a list of assets that already exist in Quant (along with md5 values) so you only need to push files that have changed or do not already exist.
+The Quant API will scan your markup and identify assets. It will respond to your request with a list of assets that already exist in Quant (along with MD5 values) so you only need to push files that have changed or do not already exist.
 
 #### Custom headers
 

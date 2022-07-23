@@ -20,7 +20,7 @@ SSL certificates will automatically be generated (provided by [Let's Encrypt](ht
 
 Once a domain has been added DNS instructions will appear at the top of the table, and we will monitor for DNS change to take effect. When we detect your DNS has been configured correctly the "DNS engaged" value will be "Yes".
 
-Certificates are automatically created and renewed periodically via our automated process, however if you need to manually trigger a SSL certificate generation (e.g during go-live to minimise SSL errors) then you may click the "Renew" button next to any domain.
+Certificates are automatically created and renewed periodically via our automated process, however if you need to manually trigger a SSL certificate generation (e.g during go-live to minimize SSL errors) then you may click the "Renew" button next to any domain.
 
 :::tip
 Quant will always redirect insecure traffic to HTTPS. For improved security you should consider [enabling HSTS](/docs/dashboard/custom-http-headers) via the custom headers tool
