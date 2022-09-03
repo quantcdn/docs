@@ -32,7 +32,7 @@ With this flexibility you can create many complex rule sets, for example:
   * Match content under `/private/files/*` and apply an authentication shield
   * Match content at `*` and proxy the entire domain (traditional CDN)
   * Match content at `/api/v1/*` and proxy to an API microservice (optionally enforcing cache-time on the response)
-  * Match content at `/api/v2/*` and proxy to a separate API micro-service
+  * Match content at `/api/v2/*` and proxy to a separate API microservice
   * Match content at `/views/ajax*` and proxy to a backend Drupal instance
   * Match content at `/blogs/*/category/*/posts/*` and redirect to `/categories/$2/year/$1/$3`
 
