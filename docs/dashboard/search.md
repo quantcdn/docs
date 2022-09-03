@@ -12,7 +12,7 @@ When search is enabled on a project all content change will automatically be tra
 
 ## Search subscription
 
-Search is a bolt-on subscription which can be managed on a per account/organisation basis, meaning a single search subscription can be used for all projects within an account.
+Search is a bolt-on subscription which can be managed on a per account/organization basis, meaning a single search subscription can be used for all projects within an account.
 
 Navigate to the "Subscription" section of the Dashboard and click "Change plan" in the Search section to add or update a subscription.
 
@@ -67,7 +67,7 @@ To include taxonomies in your facet list simply add any vocabulary machine name 
 
 Search pages can be created via the Quant dashboard.
 
-These search pages can generate functional search pages with a single click, allowing customisable facets, content filters, templates and design.
+These search pages can generate functional search pages with a single click, allowing customize facets, content filters, templates and design.
 
 1. Navigate to the "Search" section of the dashboard
 2. Click "Create" under the search pages section

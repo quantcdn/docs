@@ -7,7 +7,7 @@ sidebar_label: API client workflow
 
 ## Step 1: Send markup
 
-The first request should send page markup. The Quant service will respond with detected assets (e.g images, stylesheets, etc) and include existing md5 values if the files already exist in Quant.
+The first request should send page markup. The Quant service will respond with detected assets (e.g images, stylesheets, etc) and include existing MD5 values if the files already exist in Quant.
 
 An example content payload:
 ```json
@@ -63,6 +63,6 @@ An example content payload:
 }
 ```
 
-## Step 2: Local comparison of md5 values
+## Step 2: Local comparison of MD5 values
 
-Based on the response the client should iterate through relevant attachments and compare `existing_md5` values with local asset hashes. Only files that do not have any existing md5 (or the md5 does not match) need to be uploaded to ensure the process is as efficient as possible.
+Based on the response the client should iterate through relevant attachments and compare `existing_md5` values with local asset hashes. Only files that do not have any existing MD5 (or the MD5 does not match) need to be uploaded to ensure the process is as efficient as possible.

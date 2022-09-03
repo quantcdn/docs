@@ -22,7 +22,15 @@ Quant works just fine with sites hosted on Wordpress.com. Simply ensure the Webs
 
 ### Contact Form 7 support
 
-If you use Contact Form 7 and intend on using the [Quant Forms](/docs/dashboard/forms) solution you need to make a small [configuration tweak](/docs/dashboard/forms#contact-form-7-support-wordpress).
+Contact Form 7 posts values via AJAX by default. The response from Quant is not as CF7 expects, so an error is received.
+
+To resolve simply disable the submission via JavaScript in WordPress by adding the following to your `wp-config.php` file:
+```
+define ( 'WPCF7_LOAD_JS', false );
+```
+
+Push your form content from WordPress to Quant after making this change.
+
 
 ### Elementor support
 
@@ -33,7 +41,7 @@ Elementor is a popular drag and drop layout and page manager for WordPress. Elem
 
 ### Divi Builder support
 
-If using the Divi Builder plugin you should disable "Minify And Combine Javascript Files" and "Minify And Combine CSS Files".
+If using the Divi Builder plugin you should disable "Minify And Combine JavaScript Files" and "Minify And Combine CSS Files".
 
 These options can lead to absolute references in CSS files which break when serving content via Quant.
 

@@ -3,7 +3,7 @@ module.exports = {
     tagline: 'Documentation & Guides',
     url: 'https://docs.quantcdn.io',
     baseUrl: '/',
-    favicon: 'img/favicon.svg',
+    favicon: 'img/favicon.png',
     organizationName: 'quantcdn', // Usually your GitHub org/user name.
     projectName: 'docs', // Usually your repo name.
     stylesheets: [

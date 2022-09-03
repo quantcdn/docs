@@ -27,7 +27,7 @@ The URL match field should be a relative path (e.g `/path/to/match`) and is case
 
 You can create complex matching patterns by using the wildcard character (`*`). These matches can be captured and reused in the resulting action.
 
-With this flexibility you can create many complex rulesets, for example:
+With this flexibility you can create many complex rule sets, for example:
 
   * Match content under `/private/files/*` and apply an authentication shield
   * Match content at `*` and proxy the entire domain (traditional CDN)
@@ -72,7 +72,7 @@ Redirection will allow for content to redirect internally (relative) or external
 
 Authentication allows you to password protect areas of your site.
 
-![Auth configuration](/img/rules-auth.png)
+![Authentication configuration](/img/rules-auth.png)
 
 
 ## Configure

@@ -11,11 +11,11 @@ Install the CLI tool via NPM. Simply run:
 npm i -g @quantcdn/quant-cli
 ```
 
-## Initialise
+## Initialize
 
 The CLI tool expects to run from a folder containing a `quant.json` file, which contains information necessary to connect to the Quant service.
 
-To initialise Quant (and create the `quant.json` file) navigate to a directory containing build assets and run `quant init`.
+To initialize Quant (and create the `quant.json` file) navigate to a directory containing build assets and run `quant init`.
 ```
 *** Initialise Quant ***
 prompt: Enter QuantCDN endpoint:  (https://api.quantcdn.io)

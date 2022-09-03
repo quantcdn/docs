@@ -13,7 +13,7 @@ The optional `quant_cron` submodule allows for selective content push whenever c
 3. Configure entities or custom routes to push each time cron runs
 
 :::tip
-Configure a custom cronjob to run the Quant cron seed more frequently if desired. For example to run every 30m:
+Configure a custom cron job to run the Quant cron seed more frequently if desired. For example to run every 30m:
 ```
 */30 * * * * drush php-eval 'quant_cron_cron();' > /var/log/last-quant-cron.log 2>&1
 ```

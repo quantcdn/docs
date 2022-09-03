@@ -33,7 +33,7 @@ define( 'WP_HOME', 'https://wordpress.example.com' );
 define( 'WP_SITEURL', 'https://wordpress.example.com' );
 ```
 
-The most flexible choice is to allow your Wordpress site to respond on any domain, and under any protocol. This allows the site to run under both `edit.example.com` as well as `www.example.com`.
+The most flexible choice is to allow your WordPress site to respond on any domain, and under any protocol. This allows the site to run under both `edit.example.com` as well as `www.example.com`.
 
 To allow this simply make the following change in `wp-config.php`:
 ```
@@ -63,5 +63,5 @@ For more detail see the [Drupal.org page](https://www.drupal.org/docs/installing
 
 
 :::tip
-For improved security choose a highly randomised CMS domain, put behind basic auth, or move to a private network. You have much greater control over access once you use Quant to serve public traffic.
+For improved security choose a highly randomized CMS domain, put behind basic authentication, or move to a private network. You have much greater control over access once you use Quant to serve public traffic.
 :::

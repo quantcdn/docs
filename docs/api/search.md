@@ -114,4 +114,4 @@ curl -X POST https://api.quantcdn.io/v1 -d @./payload.json
 
 All keys within `search_record` are optional. The [configured extractors](/docs/dashboard/search#content-extractors) will attempt to determine content as a fallback.
 
-Search records can be updated independently of content. This means even if the static content md5 is unchanged the record will still be updated in the search index.
+Search records can be updated independently of content. This means even if the static content MD5 is unchanged the record will still be updated in the search index.

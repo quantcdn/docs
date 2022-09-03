@@ -6,7 +6,7 @@ sidebar_label: Crawl and migrate
 
 The CLI tool has a built in crawler, which is capable of migrating an entire website over to Quant with a single command.
 
-First ensure you have initialised the CLI tool and are running from a folder containing a valid `quant.json` file.
+First ensure you have initialized the CLI tool and are running from a folder containing a valid `quant.json` file.
 
 Then, simply run:
 ```

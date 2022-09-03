@@ -4,7 +4,7 @@ title: Welcome to Quant
 sidebar_label: Welcome
 ---
 
-Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of re-architecting your solution. Quant provides integrations for popular CMS and static generators to ensure your content and development workflows continue without interruption.
+Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of rearchitecting your solution. Quant provides integrations for popular CMS and static generators to ensure your content and development workflows continue without interruption.
 
 While the fundamental idea is to ensure a low-barrier to enjoy the many [benefits of static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started) for developers to create their own custom integrations.
 
@@ -36,7 +36,7 @@ Use the [CLI tool](/docs/cli/get-started) to deploy static assets, or during a [
 
 Webforms are a common challenge when moving to the static web. Quant has a powerful, embedded solution that is simple to enable.
 
-[Read more about setting up QuantForms](/docs/dashboard/forms).
+[Read more about setting up Quant Forms](/docs/dashboard/forms).
 
 ### Search
 
@@ -44,7 +44,7 @@ Our seamless search solution allows content to automatically index and remain in
 
 Create structured search records and build faceted search pages with ease.
 
-[Read more about setting up QuantSearch](/docs/dashboard/search).
+[Read more about setting up Quant Search](/docs/dashboard/search).
 
 ### Domains and TLS
 [Add an existing domain](/docs/dashboard/domains) to Quant to assign a custom domain to your site. We provide free automatic SSL certificates via [Let's Encrypt](https://letsencrypt.org/).

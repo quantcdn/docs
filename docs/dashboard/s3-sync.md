@@ -62,5 +62,5 @@ To enable this:
 ```
 
 :::caution
-Quant expects to control the content in the S3 bucket. If you update or delete content it may cause synchronisation issues. Contact Quant Support if you require assistance to resolve this.
+Quant expects to control the content in the S3 bucket. If you update or delete content it may cause synchronization issues. Contact Quant Support if you require assistance to resolve this.
 :::
