@@ -19,6 +19,10 @@ Quant Search is an [add-on feature](https://www.quantcdn.io/features) with a [no
 1. Go to the Drupal Quant Search admin page (`/admin/config/development/quant/search`)
 1. You should see a `Search is enabled for *project*` message
 
+:::Tip
+For Drupal sites, the `quant_search` module is the preferred method for adding Quant search pages. If you add search pages within the Quant Dashboard, these will not show up in Drupal. And, any search pages created in Drupal do not show up in the [Dashboard Search](https://dashboard.quantcdn.io/search) section. Search pages created in Drupal can be viewed with regular content in the [Dashboard Content](https://dashboard.quantcdn.io/content) section.
+:::
+
 ## Search Pages
 
 Unlimited Quant search pages can be added in Drupal. These pages are pushed to Quant automatically when creating or updating.
@@ -32,7 +36,7 @@ Unlimited Quant search pages can be added in Drupal. These pages are pushed to Q
 
 ### Manual filters
 
-@todo
+See the [Algolia Filter documentation](https://www.algolia.com/doc/guides/managing-results/refine-results/filtering/) for details on the types of filters that can be added.
 
 ### Facets
 
@@ -88,4 +92,8 @@ Excluding a content type after its content has been added to the index, requires
 
 ### Images
 
-@todo
+To show images with ithe search results, update the image token to the correct image style for your content type. Example:
+
+```
+[node:field_image:medium:url]
+```
