@@ -81,3 +81,11 @@ Search content for `nodes` (pages) can be configured per content type.
 1. Content types can also be excluded from the search index entirely
 1. Click the `Save configuration` button to save changes
 1. Reindex content if the configuration has changed
+
+:::Tip
+Excluding a content type after its content has been added to the index, requires clearing the search index before reindexing.
+:::
+
+### Images
+
+@todo
