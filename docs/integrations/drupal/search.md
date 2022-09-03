@@ -6,7 +6,7 @@ sidebar_label: Search module
 
 The optional Drupal Quant Search (`quant_search`) submodule allows for creating Quant Search Pages within Drupal. Quant Search leverages the powerful [Algolia search platform](https://www.algolia.com/).
 
-:::Note
+:::note
 Quant Search is an [add-on feature](https://www.quantcdn.io/features) with a [nominal cost](https://www.quantcdn.io/pricing).
 :::
 
@@ -19,7 +19,7 @@ Quant Search is an [add-on feature](https://www.quantcdn.io/features) with a [no
 1. Go to the Drupal Quant Search admin page (`/admin/config/development/quant/search`)
 1. You should see a `Search is enabled for *project*` message
 
-:::Tip
+:::tip
 For Drupal sites, the `quant_search` module is the preferred method for adding Quant search pages. If you add search pages within the Quant Dashboard, these will not show up in Drupal. And, any search pages created in Drupal do not show up in the [Dashboard Search](https://dashboard.quantcdn.io/search) section. Search pages created in Drupal can be viewed with regular content in the [Dashboard Content](https://dashboard.quantcdn.io/content) section.
 :::
 
@@ -60,7 +60,7 @@ The Quant Search index contains all the information sent to Quant based on the e
 1. Click the `Clear index` button to remove all the content from the search index
 1. Go to the Drupal Quant Index admin page to reindex content (`/admin/config/development/quant/search/index`)
 
-:::Tip
+:::tip
 Clearing the index means all of the search-related data is removed, but the Drupal pages will remain in Drupal and in Quant. If you have active search pages, these will show no results if the index has been cleared and not updated.
 
 - If you intend to remove search from your site, it is best to disable all search pages first and then clear the index
@@ -86,7 +86,7 @@ Search content for `nodes` (pages) can be configured per content type.
 - Content types can also be excluded from the search index entirely
 - Reindex content if the configuration has changed
 
-:::Tip
+:::tip
 Excluding a content type after its content has been added to the search index, requires clearing the search index before reindexing.
 :::
 
