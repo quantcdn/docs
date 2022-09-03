@@ -13,7 +13,8 @@ module.exports = {
         items: [
           'integrations/drupal',
           'integrations/drupal/seed',
-          'integrations/drupal/drupal-cron'
+          'integrations/drupal/drupal-cron',
+          'integrations/drupal/drupal-search'
         ],
       },
       'integrations/wordpress',
