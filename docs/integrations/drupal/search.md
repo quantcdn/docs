@@ -27,7 +27,8 @@ Unlimited Quant search pages can be added in Drupal. These pages are pushed to Q
 1. Click the `Add Quant search page` button
 1. Fill in the page details including, at minimum, `Label` and `Route`
 1. The page can be enabled and disabled as needed and defaults to disabled
-1. The options are fairly self-explanatory, but some notable options are noted below
+1. The options are fairly self-explanatory, but some notable options are detailed below
+1. Click the `Save` button to save the page and send the page to Quant
 
 ### Manual filters
 
@@ -42,6 +43,22 @@ Search facets can be added and will allow the user to filter the content.
 1. The `Taxonomy` facet requires you choose a `Vocabulary`
 1. The `Facet heading` is optional, but good for UX and accessibility
 1. For mutilingual sites, the `Facet language` can be chosen
-1. To remove any facet, click `Remove facet`
-1. To add a facet, fill in the bottom facet details and click `Add facet`
-1. Facets can be reordered by drag-and-drop or using the `Facet weight`
+1. To remove any facet, click the `Remove facet` button
+1. To add a facet, fill in the bottom facet details and click the `Add facet` button
+1. Facets can be reordered using drag-and-drop or changing the `Facet weight`
+1. After changing any facet information, click the `Save` button
+
+## Index
+
+The Quant Search index contains all the information sent to Quant based on the entity configuration and search pages.
+
+1. Go to the Drupal Quant Search admin page for index status (`/admin/config/development/quant/search`)
+1. Click the `Clear index` button to remove all the content from the search index
+1. Go to the Drupal Quant Index admin page to reindex content (`/admin/config/development/quant/search/index`)
+
+:::Tip
+Clearing the index means all of the search-related data is removed, but the Drupal pages will remain in Drupal and in Quant. If you have active search pages, these will show no results if the index has been cleared and not updated.
+
+1. If you intend to remove search from your site, disable all search pages first and then clear the index
+1. If you are temporarily removing index data, make sure to reindex as soon as possible
+:::
