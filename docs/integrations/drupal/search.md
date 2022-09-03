@@ -48,7 +48,7 @@ Search facets can be added and will allow the user to filter the content.
 1. Facets can be reordered using drag-and-drop or changing the `Facet weight`
 1. After changing any facet information, click the `Save` button
 
-## Index
+## Search Index
 
 The Quant Search index contains all the information sent to Quant based on the entity configuration and search pages.
 
@@ -62,3 +62,22 @@ Clearing the index means all of the search-related data is removed, but the Drup
 1. If you intend to remove search from your site, disable all search pages first and then clear the index
 1. If you are temporarily removing index data, make sure to reindex as soon as possible
 :::
+
+## Entity Configuration
+
+Some of the search results details are configurable such as the result title, summary, image, and view mode.
+
+1. Go to the Drupal Quant `Entity configuration` admin page (`/admin/config/development/quant/search/entities`)
+1. The configuration defaults to common search requirements
+1. Enable or disable `node` (page) and `term` content with the checkboxes
+1. No other configuration is available for taxonomy
+
+### Node Configuration
+
+Search content for `nodes` (pages) can be configured per content type.
+
+1. There are default options for `Title`, `Summary`, `Image`, and `Content view mode`
+1. For each content type, there are overrides available for these options
+1. Content types can also be excluded from the search index entirely
+1. Click the `Save configuration` button to save changes
+1. Reindex content if the configuration has changed
