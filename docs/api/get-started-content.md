@@ -1,13 +1,20 @@
 ---
-id: get-started
-title: Get started with the Quant API
-sidebar_label: Get started
+id: get-started-content
+title: Get started with the Content API
+sidebar_label: Get started (Content)
 ---
 
+:::tip
+The full API schema is available at https://docs.api.quantcdn.io
+:::
+
+## Overview
+
+The Content API provides an interface to create and manage content and revisions. 
 
 ## Make a request
 
-All API requests must be directed to the `https://api.quantcdn.io/v1/`. The path is prefixed with the API version. If backwards-breaking changed are introduced into the API the version number will be bumped, old versions of the API will be maintained and deprecated with plenty of notice. You will need to add specific headers to each request to ensure that the API endpoint can correctly identify you.
+All API requests must be directed to the `https://api.quantcdn.io/v1/`. The path is prefixed with the API version. If backwards-breaking changes are introduced into the API the version number will be bumped, old versions of the API will be maintained and deprecated with plenty of notice. You will need to add specific headers to each request to ensure that the API endpoint can correctly identify you.
 
 In curl a request will look like:
 
@@ -64,7 +71,7 @@ The Quant API will scan your markup and identify assets. It will respond to your
 
 #### Custom headers
 
-You may optionally provide custom headers along with the content payload. This allows fine-grained control of the headers that are emitted for each individual piece of content. Simply include key/value pairs under the `header` key:
+You may optionally provide custom headers along with the content payload. This allows fine-grained control of the headers that are emitted for each individual piece of content. Simply include key/value pairs under the `headers` key:
 
 ```json
 {

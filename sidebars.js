@@ -37,7 +37,8 @@ module.exports = {
       'cli/continuous-integration'
     ],
     'API': [
-      'api/get-started',
+      'api/get-started-content',
+      'api/get-started-projects',
       'api/search',
       'api/client-workflow'
     ],
