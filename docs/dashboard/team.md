@@ -38,7 +38,7 @@ Users will be prompted to complete the two-factor authentation set up before the
 
 ### Changing roles
 
-To change an existing user role you must have an organization owner or administrator remove and re-add you with the appropriate role.
+To change an existing user role an organization owner or administrator must remove and re-add you with the appropriate role.
 
 ### Role permissions
 
