@@ -33,7 +33,7 @@ module.exports = {
                 { to: 'docs/integrations/overview', label: 'Integrations', position: 'left' },
                 { to: 'docs/dashboard/get-started', label: 'Dashboard', position: 'left' },
                 { to: 'docs/cli/get-started', label: 'CLI', position: 'left' },
-                { to: 'docs/api/get-started', label: 'API', position: 'left' },
+                { to: 'docs/api/get-started-content', label: 'API', position: 'left' },
                 {
                     href: 'https://www.quantcdn.io',
                     label: 'quantcdn.io',
@@ -64,7 +64,7 @@ module.exports = {
                     title: 'Developers',
                     items: [{
                             label: 'API',
-                            to: 'docs/api/get-started',
+                            to: 'docs/api/get-started-content',
                         },
                         {
                             label: 'CLI',

@@ -29,6 +29,7 @@ module.exports = {
       'dashboard/custom-http-headers',
       'dashboard/search',
       'dashboard/forms',
+      'dashboard/team',
       'dashboard/s3-sync',
     ],
     'CLI': [
@@ -37,7 +38,8 @@ module.exports = {
       'cli/continuous-integration'
     ],
     'API': [
-      'api/get-started',
+      'api/get-started-content',
+      'api/get-started-projects',
       'api/search',
       'api/client-workflow'
     ],
