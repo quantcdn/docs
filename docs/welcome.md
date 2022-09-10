@@ -6,7 +6,7 @@ sidebar_label: Welcome
 
 Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of rearchitecting your solution. Quant provides integrations for popular CMS and static generators to ensure your content and development workflows continue without interruption.
 
-While the fundamental idea is to ensure a low-barrier to enjoy the many [benefits of static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started-content) for developers to create their own custom integrations.
+While the fundamental idea is to ensure a low barrier to enjoy the many [benefits of static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started-content) for developers to create their own custom integrations.
 
 ## Discover Quant
 
