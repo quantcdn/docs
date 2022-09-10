@@ -32,5 +32,5 @@ Read the full [schema documentation](https://docs.dashboard.quantcdn.io) to bett
 
 
 :::note
-Not all dashboard functionality is available via API. Please raise a feature request if your organization require additional access.
+Not all dashboard functionality is available via API. Please raise a feature request if your organization requires additional access.
 :::

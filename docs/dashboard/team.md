@@ -20,26 +20,25 @@ You may revoke the invitation before they accept.
 
 ### Accepting or declining an invitation
 
-Users will receive an email prompting them to join. If they already have an account they can click the link and login to accept, otherwise they must first register.
+Users will receive an email prompting them to join. If they already have an account, they can click the link and login to accept; otherwise they must first register.
 
-Inivitations and existing memberships are also listed from the profile page - they can be accepted or declined from this screen.
+Inivitations and existing memberships are also listed from the profile page. They can be accepted or declined from this screen.
 
 ## Change active organizations
 
-Click on your profile icon (upper right) to switch between organizations or your own private account.
+Click on your profile icon (upper right) to switch between organizations and your own private account.
 
-Projects are scoped to organizations. Once you have activated an organization the projects list (upper left) can be used to toggle the active project.
+Projects are scoped to organizations. Once you have activated an organization, the projects list (upper left) can be used to toggle the active project.
 
 ### Enforcing two-factor authentication
 
 The organization owner can enforce two-factor authentication by checking the box at the top of the page.
 
-Users will be prompted to complete the two-factor authentation enrolment before they can undertake any further action within the dashboard.
+Users will be prompted to complete the two-factor authentation set up before they can undertake any further action within the dashboard.
 
 ### Changing roles
 
 To change an existing user role you must have an organization owner or administrator remove and re-add you with the appropriate role.
-
 
 ### Role permissions
 
@@ -85,4 +84,4 @@ To change an existing user role you must have an organization owner or administr
 | Enforce TFA                |             |                  |           |               | ✅                  |
 | Reset team member TFA¹     |             |                  |           |               | ✅                  |
 
-¹ via support desk. Additional verification processes apply.
+¹ via the support desk. Additional verification processes apply.
