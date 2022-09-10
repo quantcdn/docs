@@ -10,7 +10,7 @@ This can be useful for more control over structured data (e.g title/summary/cont
 
 ## Using the Search API
 
-See the [Getting Started](/docs/api/get-started) section first to ensure you can authenticate and make successful API connections.
+See the [Getting Started](/docs/api/get-started-content) section first to ensure you can authenticate and make successful API connections.
 
 ### Check index status
 

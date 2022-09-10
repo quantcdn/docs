@@ -64,7 +64,7 @@ module.exports = {
                     title: 'Developers',
                     items: [{
                             label: 'API',
-                            to: 'docs/api/get-started',
+                            to: 'docs/api/get-started-content',
                         },
                         {
                             label: 'CLI',
