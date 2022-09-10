@@ -29,6 +29,7 @@ module.exports = {
       'dashboard/custom-http-headers',
       'dashboard/search',
       'dashboard/forms',
+      'dashboard/team',
       'dashboard/s3-sync',
     ],
     'CLI': [
