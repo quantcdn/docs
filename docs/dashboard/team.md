@@ -12,13 +12,13 @@ Navigate to the "Team" section of the dashboard to see all current members and t
 
 Only organization owners or administators have permission to manage team members.
 
-### Inviting new members
+## Inviting new members
 
 Click on the "Invite" button and provide name, email and role to add users to the organization.
 
 You may revoke the invitation before they accept.
 
-### Accepting or declining an invitation
+## Accepting or declining an invitation
 
 Users will receive an email prompting them to join. If they already have an account, they can click the link and login to accept; otherwise they must first register.
 
@@ -30,17 +30,17 @@ Click on your profile icon (upper right) to switch between organizations and you
 
 Projects are scoped to organizations. Once you have activated an organization, the projects list (upper left) can be used to toggle the active project.
 
-### Enforcing two-factor authentication
+## Enforcing two-factor authentication
 
 The organization owner can enforce two-factor authentication by checking the box at the top of the page.
 
 Users will be prompted to complete the two-factor authentation set up before they can undertake any further action within the dashboard.
 
-### Changing roles
+## Changing roles
 
 To change an existing user role an organization owner or administrator must remove and re-add you with the appropriate role.
 
-### Role permissions
+## Role permissions
 
 |                            | Developer   | Content manager | Read only | Administrator | Organization owner |
 | ----------- | :----: | :----: | :----: | :----: | :----: |
