@@ -19,13 +19,23 @@ Click on the "View Revisions" button to load the revisions viewer for any piece 
 
 The revisions viewer will allow you to go back in time and view any historic content revision. Metadata values for `log` and `author_name` will display if they were provided when the content revision was pushed. Similarly if content had a publish schedule attached it will display in the revision detail.
 
+### Delete revision
+
+Provided you have access you may also delete individual revisions from this interface. Click the "Delete revision" button to permanently remove the revision content.
+
+You will be prompted to confirm deletion. This process is not reversible and content is deleted immediately.
+
 ### Unpublish content
 
 Click on the "Unpublish" button with the currently published revision selected. This will mark the content as unpublished, and immediately start throwing 404 errors to site visitors.
 
+You will be prompted to confirm the change.
+
 ### Restore revision
 
 Select any historic revision and click the "Publish revision" button to mark this revision as actively published. This will replace any currently published revision. The content will be immediately available to site visitors.
+
+You will be prompted to confirm the change.
 
 ##  Editing or creating new content
 In some instances you may wish to create or edit content directly via the Quant Dashboard. To do this click the "Edit" button next to any content item in the table.
