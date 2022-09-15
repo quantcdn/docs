@@ -40,6 +40,12 @@ Users will be prompted to complete the two-factor authentation set up before the
 
 To change an existing user role an organization owner or administrator must remove and re-add you with the appropriate role.
 
+## Monthly report
+
+Organization owners may opt in to receive a monthly team report by checking the box on the page. This report will send an email on the first of each month identifying all members and roles within the organization. It will also provide detail on when each user last logged in, and how many tokens they have active with scoped access to the organization.
+
+This report is useful for organization owners to proactively monitor and remove stale accounts, especially those with elevated permissions.
+
 ## Role permissions
 
 |                            | Developer   | Content manager | Read only | Administrator | Organization owner |
@@ -82,6 +88,7 @@ To change an existing user role an organization owner or administrator must remo
 | Manage team members        |             |                  |           | ✅            | ✅                  |
 | Manage subscription        |             |                  |           | ✅            | ✅                  |
 | Enforce TFA                |             |                  |           |               | ✅                  |
+| Receive monthly team report|             |                  |           |               | ✅                  |
 | Reset team member TFA¹     |             |                  |           |               | ✅                  |
 
 ¹ via the support desk. Additional verification processes apply.
