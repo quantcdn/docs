@@ -22,9 +22,42 @@ If you are unsure about DNS values, where to change, or generally need support w
 
 Once you have moved public traffic to Quant one issue remains: How to retain access to your WordPress or Drupal site for ongoing content authoring and administration.
 
-Generally the simplest thing to do is move your CMS to a separate domain.
+Generally the simplest thing to do is move your CMS to a separate domain. If you are on an organization level plan you may also choose to proxy authenticated traffic through to origin while serving from the Quant static store for all public/anonymous users.
 
-### WordPress
+### Proxy authenticated users
+:::info
+This approach requires the Rules Engine, which is available on all organization level plans.
+:::
+
+This approach allows you to continue managing your CMS content on your primary/production domain by proxying any authenticated traffic (e.g logged in site editors) through to your origin server, while serving from the static offload for all other users.
+
+#### WordPress
+
+1. Navigate to the "Rules" section of the Quant Dashboard
+2. Create a new rule for any/all relevant domains with a URL match of `/wp-login*`
+3. Perform a [standard "Proxy" action](/docs/dashboard/page-rules#proxy) pointing to your webserver
+4. Ensure the "Cache lifetime" is set to `0` to prevent caching the login route
+5. Save the rule
+6. Create another new rule for any/all relevant domains with a URL match of `*`
+7. Perform a [standard "Proxy" action](/docs/dashboard/page-rules#proxy) pointing to your webserver
+8. This time, tick the "Only with cookie" option and provide `wordpress_logged_in_*` as the cookie name
+9. Save the rule. You should be able to login at `/wp-login.php` and update content normally
+
+
+#### Drupal
+
+1. Navigate to the "Rules" section of the Quant Dashboard
+2. Create a new rule for any/all relevant domains with a URL match of `/user/*`
+3. Perform a [standard "Proxy" action](/docs/dashboard/page-rules#proxy) pointing to your webserver
+4. Ensure the "Cache lifetime" is set to `0` to prevent caching the login route
+5. Save the rule
+6. Create another new rule for any/all relevant domains with a URL match of `*`
+7. Perform a [standard "Proxy" action](/docs/dashboard/page-rules#proxy) pointing to your webserver
+8. This time, tick the "Only with cookie" option and provide `SSESS*` as the cookie name
+9. Save the rule. You should be able to login at `/user/login` and update content normally
+
+
+### Run WordPress on a separate editorial domain
 
 Set your new WordPress CMS domain in your `wp-config.php` file as below, or follow the [WordPress.org guide](https://wordpress.org/support/article/changing-the-site-url/) for more options.
 
@@ -46,7 +79,7 @@ if (!empty($_SERVER['HTTP_HOST'])) {
 ```
 
 
-### Drupal
+### Run Drupal on a separate editorial domain
 
 Ensure your CMS domain is included in your Drupal `settings.php` file (`trusted_host_patterns` array). For example:
 ```
