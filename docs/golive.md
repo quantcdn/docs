@@ -22,14 +22,14 @@ If you are unsure about DNS values, where to change, or generally need support w
 
 Once you have moved public traffic to Quant one issue remains: How to retain access to your WordPress or Drupal site for ongoing content authoring and administration.
 
-Generally the simplest thing to do is move your CMS to a separate domain. If you are on an organization level plan you may also choose to proxy authenticated traffic through to origin while serving from the Quant static store for all public/anonymous users.
+Generally the simplest thing to do is move your CMS to a separate domain. If you are on an organization-level plan, you may also choose to proxy authenticated traffic through to origin while serving from the Quant static store for all public/anonymous users.
 
 ### Proxy authenticated users
 :::info
-This approach requires the Rules Engine, which is available on all organization level plans.
+This approach requires using the "Rules" feature, which is available on all organization-level plans.
 :::
 
-This approach allows you to continue managing your CMS content on your primary/production domain by proxying any authenticated traffic (e.g logged in site editors) through to your origin server, while serving from the static offload for all other users.
+The following configuration lets you continue managing your CMS content on your primary/production domain by proxying any authenticated traffic (e.g logged-in site editors) through to your origin server, while serving from the Quant static store for all other users.
 
 #### WordPress
 
