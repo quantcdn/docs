@@ -4,7 +4,7 @@ title: Web Application Firewall (WAF)
 sidebar_label: Web Application Firewall (WAF)
 ---
 
-The Quant Web Application Firewall has full support for the latest OWASP Core Ruleset, as well as support for integrated Project Honeypot, bot protection, rate limiting, and geo controls.
+The Quant Web Application Firewall has full support for the latest OWASP Core Rule Set, as well as support for integrated Project Honeypot, bot protection, rate limiting, and geo controls.
 
 It may be enabled with granular controls on each domain/route configured to proxy back to your origin server.
 
@@ -15,10 +15,10 @@ To enable the WAF, simply tick the "Enable WAF" checkbox on any proxy configurat
 
 Set the WAF to either **Report** or **Block** mode to either report on WAF hits or block them.
 
-Use the WAF level slider to change the level of strictness enforced by the WAF. This equates to the ModSecurity Core Ruleset "Paranoia" levels associated with each rule. The default and recommended level is 1.
+Use the WAF level slider to change the level of strictness enforced by the WAF. This equates to the ModSecurity Core Rule Set "Paranoia" levels associated with each rule. The default and recommended level is 1.
 
 :::info
-When enabling the WAF it is recommended you start in **Report** mode for a period to monitor WAF hits and find and remove false positives through standard browsing behavior. Once you are satisifed you are no longer receiving false positives, move to **Block** mode.
+When enabling the WAF it is recommended you start in **Report** mode for a period to monitor WAF hits and find and remove false positives through standard browsing behavior. Once you are satisfied you are no longer receiving false positives, move to **Block** mode.
 :::
 
 ## Rules and overrides
@@ -33,7 +33,7 @@ Use the "Always allow from IPs" to allow trusted users or networks to bypass the
 
 Enable block dictionaries to block known bad bots, user-agents, referers and IP addresses associated with bad actors as seen across our network.
 
-**Note:** We consider these safe to enable, however keep an eye on the WAF hits to ensure you are not inadventently blocking a crawler or bot you may want to allow. These dictionaries may be overridden if you need further control, contact support for further assistance.
+**Note:** We consider these safe to enable, however keep an eye on the WAF hits to ensure you are not inadvertently blocking a crawler or bot you may want to allow. These dictionaries may be overridden if you need further control, contact support for further assistance.
 
 
 ## Http:BL (Project Honeypot)
@@ -55,13 +55,13 @@ Rate limiting options are a powerful protection against high traffic events.
 
 IP rate limiting is useful to prevent attacks or excessive traffic from individuals, bots and crawlers. Set the mode to either **Report** or **Enabled** to toggle between report and blocking modes.
 
-Next, specify a RPS (requests per second) threshold in seconds, as well as a cooldown period in seconds. The user will be receive a `429: Too Many Requests` response during the cooldown period, and this traffic will be kept away from your origin server.
+Next, specify a RPS (requests per second) threshold in seconds, as well as a cool-down period in seconds. The user will be receive a `429: Too Many Requests` response during the cool-down period, and this traffic will be kept away from your origin server.
 
 ### Request header rate limiting
 
 You may also use rate limiting grouped by a request header. This can be used on an API service for instance to limit requests by a known group (for example, `X-API-Organization`), or any other identifier as seen in the request headers.
 
-As with IP rate limiting you may set the RPS threshold and cooldown period to control the traffic.
+As with IP rate limiting you may set the RPS threshold and cool-down period to control the traffic.
 
 
 ## Custom 403 error pages
