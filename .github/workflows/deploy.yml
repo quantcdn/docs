@@ -50,8 +50,15 @@ jobs:
       - name: Show generated outputs
         run: find build
 
+      - name: Cache local revision file
+        id: cache-quant-revisions
+        uses: actions/cache@v2
+        with:
+          path: .quant-revision
+          key: quant-revision
+
       - name: Deploy updates to QuantCDN
-        uses: quantcdn/deploy-action@v1.3.1
+        uses: quantcdn/deploy-action@v2.0.0
         with:
           customer: "${{ env.QUANT_CUSTOMER }}"
           project: "${{ env.QUANT_PROJECT }}"
@@ -59,6 +66,8 @@ jobs:
           dir: build
           chunk-size: 20
           skip-purge: true
+          enable-index-html: true
+          revision-log: .quant-revision
 
       - name: Purge the QuantCDN cache
         uses: quantcdn/purge-action@v1.2.0
