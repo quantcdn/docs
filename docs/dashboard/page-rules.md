@@ -47,16 +47,7 @@ The action refers to the response Quant will take if the pattern matches.
 
 A proxy will function in the same way as a traditional CDN would, making a backend request to an origin server and serving the resulting content, optionally caching the result at the edge.
 
-![Proxy configuration](/img/rules-proxy.png)
-
-* Proxy address: is your backend/origin server. This may be a FQDN or IP address and should include the protocol.
-* Host header: should be a valid Host header to send to the origin server.
-* Basic authentication: provide a username and password if the origin server is protected by basic authentication.
-* Cache lifetime: optionally override the cache lifetime of the proxied response in Quant. Leave blank to inherit cache headers.
-* Disable TLS verification: may be used if the server is using a self-signed (or other invalid) certificate.
-* Only on 404: will serve from the Quant static edge if content exists, else proxy.
-
-You may use the wildcard captures in your proxies, simply include a capture value in the proxy address. For example: a match on `/api/*` with a proxy address: `https://api.example.com/v1/$1`.
+For more detail and configuration documentation, see the [CDN Proxy page](./page-rules-proxy).
 
 ### Redirect
 
