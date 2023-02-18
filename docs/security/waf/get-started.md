@@ -1,6 +1,6 @@
 ---
 title: WAF
-sidebar_label: Security
+sidebar_label: Get started
 ---
 
 QuantCDN provides a WAF...
