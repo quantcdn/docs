@@ -46,5 +46,26 @@ module.exports = {
       'api/search',
       'api/client-workflow'
     ],
+    "Security": [
+      {
+        type: "category",
+        label: "WAF",
+        items: [
+          "security/waf/get-started",
+          "security/waf/management",
+          {
+            type: "category",
+            label: "Ruleset",
+            items: [
+              'security/waf/crs/910',
+              'security/waf/crs/920',
+              'security/waf/crs/930',
+              'security/waf/crs/931',
+              'security/waf/crs/932',
+            ],
+          },
+        ],
+      }
+    ],
   },
 };
