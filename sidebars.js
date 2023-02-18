@@ -46,5 +46,8 @@ module.exports = {
       'api/search',
       'api/client-workflow'
     ],
+    "Security": [
+      "security/overview",
+    ],
   },
 };
