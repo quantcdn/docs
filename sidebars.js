@@ -52,6 +52,7 @@ module.exports = {
         label: "WAF",
         items: [
           "security/waf/get-started",
+          "security/waf/management",
           {
             type: "category",
             label: "Ruleset",
