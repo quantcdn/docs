@@ -4,7 +4,7 @@ title: Using quant_purger
 sidebar_label: Purger
 ---
 
-The optional `quant_purger` submodule adds cache tag support for Quant content seeding. This relies on the [Purge API](https://www.drupal.org/project/purge) and allows the Quant module suite to identify pages that require updating based on user actions and the notify any related content that is impacted by this ban
+The optional `quant_purger` submodule adds cache tag support for Quant content seeding. This relies on the [Purge API](https://www.drupal.org/project/purge) and allows the Quant module suite to identify pages that require updating based on user actions and then indentify any related content that is impacted by this ban and prepare them for seeding.
 
 ## How does it work?
 
@@ -21,12 +21,22 @@ When Drupal issues a cache clear event the Purge module collects that informatio
 
 Drupal is verbose with the number of tags that will be cleared for each run and there are some commonly excluded tags from the list (eg. `render`) as they appear on every page.
 
-In order for the cache tag purging to be effective you will need to inspect the cache tags that are present on the URLs and create a list of tags to exclude.
+In order for cache tag purging to be effective you will need to inspect the cache tags that are present on the URLs and create a list of tags to exclude.
 
 1. Enable the `purge_ui` companion module
-2. Edit the `quant_purger` processor
+2. Edit the **Purge Quant** querer
 3. Update the tag block list
 
 :::tip
-The current tag list can be viewed `drush config:get quant_purger.settings tag_blocklist`
+To identify the tags that are associated with your site you can access them from the reference table
+
+```
+drush sqlq "select url, tags from purge_queuer_quant"
+```
+:::
+
+![Quant Purger queue configuration](/img/quant-purger-config.png)
+
+:::tip
+The current tag list can be viewed with `drush config:get quant_purger.settings tag_blocklist`
 :::
