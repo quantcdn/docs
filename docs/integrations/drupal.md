@@ -10,15 +10,15 @@ Drupal modules exist for versions 7, 8, 9, and 10. The codebases are [maintained
 
 1. Download the Quant module via [Drupal.org](https://drupal.org/project/quantcdn) or:
 - **Drupal 7:** Drush (`drush dl quantcdn`)
-- **Drupal 8, 9, and 10:** Composer (`composer require drupal/quantcdn`)
-2. Install the module and visit the `Configuration > Quant` admin page:
+- **Drupal 8, 9, 10:** Composer (`composer require drupal/quantcdn`)
+2. Install the module and visit the main Quant configuration page:
 - **Drupal 7:** `/admin/config/services/quant`
-- **Drupal 8, 9, and 10:** `/admin/config/quant`
-3. Ensure "Track content changes" is enabled, and you have each entity enabled that should be automatically pushed to Quant.
+- **Drupal 8, 9, 10:** `/admin/config/quant`
+3. Ensure "Track content changes" is enabled, and you have all entities enabled that should be automatically pushed to Quant when changes are made.
 4. Set your "Webserver URL" to the local webserver loopback address (e.g. `http://localhost`), and provide your website domain as the HTTP Host header (e.g. `www.example.com`).
 5. Check other options on the main configuration page to see if there are other settings you want to update.
-6. Navigate to the API tab and enter your endpoint, organization, project, and token details. These can all be found on the **`Integrations` page** on the [Quant Dashboard](/docs/dashboard/get-started).
-7. After filling in your API details, you should see a "Successfully connected to ..." message at to the top of the page. If not, check API tab details and compare them against the information on the **`Integrations` page** and update as needed.
+6. Navigate to the API tab and enter your endpoint, organization, project, and token details. These can be found on the **`Integrations` page** in the [Quant Dashboard](/docs/dashboard/get-started).
+7. After filling in your API details, you should see a "Successfully connected to ..." message at to the top of the page. If not, check your API tab details and compare them against the information on the **`Integrations` page** in the Dashboard and update as needed.
 8. If you are still experiencing issues, create a [support ticket](https://support.quantcdn.io/), so we can help you get set up.
 
 ### Shield
