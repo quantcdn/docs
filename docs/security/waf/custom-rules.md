@@ -46,5 +46,3 @@ SecRule &TX:allowed_request_content_type "@eq 0" \
   ver:'OWASP_CRS/4.0.0-rc1',\
   setvar:'tx.allowed_request_content_type=|application/x-www-form-urlencoded| |multipart/form-data| |multipart/related| |text/xml| |application/xml| |application/soap+xml| |application/x-amf| |application/json| |application/cloudevents+json| |application/cloudevents-batch+json| |application/octet-stream| |application/csp-report| |application/xss-auditor-report| |text/plain| |application/vnd.api+json|'"
 ```
-
-
