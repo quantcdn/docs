@@ -11,7 +11,7 @@ QuantWAF will load all `.conf` files that are present in `/opt/proxy_config/cust
 
 ### Overriding configuration values
 
-ModSecurity comes preconfigured with a number of variables that are used by the rulesets. These rules are defined as default values if no rule prior has set them. This enables fine tuning of a number of parameters for the firewall.
+ModSecurity comes preconfigured with a number of variables that are used by the rulesets. These rules are defined as default values if no prior rule has set them. This enables fine-tuning of a number of parameters for the firewall.
 
 **Sample configuration value**
 
