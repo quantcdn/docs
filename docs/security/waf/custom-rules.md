@@ -3,7 +3,7 @@ title: Custom rule definitions
 sidebar_lable: Custom rules
 ---
 
-QuantWAF allows developers and security experts to provide configuration values to further customise the firewalls behaviour. This enables further configuration for the corerule set that is provided by Coraza and allows completely custom rules to be included in the firewall.
+QuantWAF allows developers and security experts to provide configuration values to further customize the firewall's behavior. This enables further configuration for the Core Rule Set that is provided by [Coraza](https://coraza.io/) and allows completely custom rules to be included in the firewall.
 
 ## Writing a custom rule
 
