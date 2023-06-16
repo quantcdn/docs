@@ -15,7 +15,7 @@ ModSecurity comes preconfigured with a number of variables that are used by the 
 
 **Sample configuration value**
 
-The allowed content types by the default WAF configuration is:
+The WAF's default allowed content types are:
 
 - application/x-www-form-urlencoded
 - multipart/form-data
