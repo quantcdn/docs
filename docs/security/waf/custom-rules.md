@@ -34,7 +34,7 @@ The WAF's default allowed content types are:
 
 Drupal relies heavily on the [JSON:API specification](https://jsonapi.org/) which states that the `application/vnd.api+json` content type should be used when making requests. Requests that use this content type will be blocked.
 
-This can be overridden by providing a custom `.conf` file that sets the `allowed_request_content_type` variable.
+This can be overridden by providing a custom `.conf` file that sets the `allowed_request_content_type` variable. For example:
 
 ```
 # Default HTTP policy: allowed_request_content_type (rule 900220)
