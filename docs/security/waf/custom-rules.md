@@ -7,7 +7,7 @@ QuantWAF allows developers and security experts to provide configuration values 
 
 ## Writing a custom rule
 
-QuantWAF will load all `.conf` files that are present in `/opt/proxy_config/custom-rules`, rules are written in the [ModSecurity rules langauge](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v3.x)).
+QuantWAF will load all `.conf` files that are present in `/opt/proxy_config/custom-rules`. Rules are written in the [ModSecurity rules language](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v3.x)).
 
 ### Overriding configuration values
 
