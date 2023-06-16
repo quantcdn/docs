@@ -17,20 +17,20 @@ ModSecurity comes preconfigured with a number of variables that are used by the 
 
 The WAF's default allowed content types are:
 
+- application/cloudevents-batch+json
+- application/cloudevents+json
+- application/csp-report
+- application/json
+- application/octet-stream
+- application/soap+xml
+- application/x-amf
+- application/xml
+- application/xss-auditor-report
 - application/x-www-form-urlencoded
 - multipart/form-data
 - multipart/related
-- text/xml
-- application/xml
-- application/soap+xml
-- application/x-amf
-- application/json
-- application/cloudevents+json
-- application/cloudevents-batch+json
-- application/octet-stream
-- application/csp-report
-- application/xss-auditor-report
 - text/plain
+- text/xml
 
 Drupal relies heavily on the JSON:API specification which states that the `application/vnd.api+json` content type should be used when making requests. Requests that use this content type will be blocked.
 
