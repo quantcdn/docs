@@ -46,7 +46,7 @@ The crawler should find all website pages and assets; however, some content may 
 
 ## Crawler changes
 
-Crawler configuration can be edited at any time by clicking `Edit` from the `Crawl > Configs` page. When editing, you will also have the option to set the `Starting URLs` for your crawl to prioritize certain web pages. If you no longer need to the crawler configuration, simply click the `Delete` button and confirm the deletion.
+Crawler configuration can be edited at any time by clicking `Edit` from the `Crawl > Configs` page. When editing, you will also have the option to set the `Headers` and `Starting URLs` for your crawl. If you no longer need to the crawler configuration, simply click the `Delete` button and confirm the deletion.
 
 ## Advanced configuration and scheduling
 
