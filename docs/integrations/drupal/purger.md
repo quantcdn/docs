@@ -15,10 +15,10 @@ When Drupal issues a cache clear event, the Purge module collects that informati
 ## Setup
 
 1. Enable the `quant_purger` module
-2. Seed your content to create entries in the reference table
+2. Seed your content to create entries in the reference database table
 
 :::tip
-To identify the cache tags that are associated with your site, you can access them from the reference table:
+To identify the cache tags that are associated with your site, you can access them from the reference database table:
 
 ```
 drush sqlq "select url, tags from purge_queuer_quant"
@@ -27,20 +27,35 @@ drush sqlq "select url, tags from purge_queuer_quant"
 
 ## Additional configuration
 
-Drupal has a large number of cache tags, so some common cache tags are on the tag blocklist by default as they appear on every page (e.g., `rendered`). You can remove any of the default tags but keep in mind this may have a negative performance impact.
+### Path and tag lists
 
-In order for cache tag purging to be effective and efficient, inspect the cache tags that are present on the URLs in the reference table and update the tag blocklist with tags to exclude. For example, if you don't want content to be queued for seeding when a particular media item is updated, you can add the cache tag for that media item to the tag blocklist.
+Drupal has a large number of cache tags, so some common cache tags are in the tag blocklist by default as they appear on every page (e.g., `rendered`). You can remove any of the default tags but keep in mind this may have a negative performance impact.
+
+In order for cache tag purging to be effective and efficient, inspect the cache tags that are present for the URLs in the reference database table and update the tag blocklist with tags to exclude. For example, if you don't want content to be queued for seeding when a particular media item is updated, you can add the cache tag for that media item to the tag blocklist.
 
 1. Enable the `purge_ui` companion module
-2. Edit the **Purge Quant** queuer configuration
-3. Update the tag blocklist
+2. Navigate to `/admin/config/development/performance/purge`
+3. Edit the **Purge Quant** queuer configuration
+4. Update the tag blocklist as needed
 
 You can also update the path blocklist if there are certain paths that you don't want to be queued for seeding during cache clear events.
 
+![Quant Purger UI tab](/img/quant-purger-tab.png)
+*The Quant Purger tab in the Drupal UI links to the Purge UI.*
+
+![Purge UI](/img/quant-purger-purge-ui-config.png)
+*The Purge UI allow you to update the Quant Purger configuration.*
+
 ![Quant Purger queue configuration](/img/quant-purger-config.png)
+*The path and tag blocklists can be modified in the Quant Purger configuration.*
 
 :::tip
-The current tag list can be viewed with `drush config:get quant_purger.settings tag_blocklist`
+The current path and tag lists can be viewed with:
+
+```
+drush config:get quant_purger.settings path_blocklist
+drush config:get quant_purger.settings tag_blocklist
+```
 :::
 
 If you want to delete the values from the reference database table, you can use the `Clear the registry` button through the Purge UI or you can delete them directly in the database. In order to populate the table again, you must run a seed.
@@ -48,6 +63,16 @@ If you want to delete the values from the reference database table, you can use 
 ```
 drush sqlq "delete from purge_queuer_quant"
 ```
+
+### Performance tuning
+
+For the best performance, it is highly recommended that your settings.php file includes:
+
+```
+$settings['queue_service_quant_seed_worker'] = 'quant.queue_factory';
+```
+
+When using `drush` without this setting, duplicates may be processed which can slow down seeding significantly.
 
 ## Example usage
 
