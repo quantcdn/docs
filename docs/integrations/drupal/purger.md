@@ -12,6 +12,8 @@ The `quant_purger` module creates a reference database table (`purge_queuer_quan
 
 When Drupal issues a cache clear event, the Purge module collects that information and exposes it so that reverse proxies can be invalidated. In Quant's use case, this provides an entry point for the Quant module suite to identify which cache tags require clearing and use that information to create queue entries that can be seeded to Quant on the next queue run.
 
+The queued content will be processed during the next core cron run. You can run the cron manually or wait for the site's cron to run on its regular schedule. For the latter, note that the static content will be out-of-sync with the Drupal site until the cron runs, which may cause confusion in some cases. Thus, it is recommended that cron is run right after content is edited if there are key pages that show the updated content.
+
 ## Setup
 
 1. Enable the `quant_purger` module
