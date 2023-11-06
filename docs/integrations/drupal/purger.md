@@ -74,7 +74,7 @@ For the best performance, it is highly recommended that your settings.php file i
 $settings['queue_service_quant_seed_worker'] = 'quant.queue_factory';
 ```
 
-When using `drush` without this setting, duplicates may be processed which can slow down seeding significantly.
+This changes the database driver that is used when managing the purge queue. Drupal's database queue driver creates a unique item each which leads to duplicate items being added to the queue which will negatively impact the seed time for your website. The driver provided by Quant is optimised for Quant's used case.
 
 ## Example usage
 
