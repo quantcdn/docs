@@ -10,7 +10,7 @@ The full API schema is available at https://docs.api.quantcdn.io
 
 ## Overview
 
-The Content API provides an interface to create and manage content and revisions. 
+The Content API provides an interface to create and manage content and revisions.
 
 ## Make a request
 
@@ -150,7 +150,7 @@ GET /global-meta
 
 You may query for the metadata of individual URLs using the `/url-meta` endpoint.
 ```
-curl -X POST -d '{"Quant-Url": ["/styles.css", "/about-us" ]}' https://api.quantcdn.io/url-meta
+curl -X POST -d '{"Quant-Url": ["/styles.css", "/about-us" ]}' https://api.quantcdn.io/v1/url-meta
 ```
 
 ### Unpublish content
@@ -165,7 +165,7 @@ curl -X PATCH -H "Quant-Url: /path/to/unpublish"
 `PATCH /publish/[REVISION_ID]` allows a previous revision to become the actively published content. You may retrieve revision ids via the metadata endpoints.
 
 ```
-curl -X PATCH -H "Quant-Url: /content" https://api.quantcdn.io/publish/123
+curl -X PATCH -H "Quant-Url: /content" https://api.quantcdn.io/v1/publish/123
 ```
 
 ### Create a redirect
@@ -183,19 +183,39 @@ This allows you to redirect one path to another when Quant is serving pages. You
 }
 ```
 
-### Create a proxy
+### Purge the cache
 
-`POST /proxy` creates an origin proxy.
+`POST /purge` to purge content paths or cache-tags from the edge caches.
 
-This will cause Quant Serve to pass the request directly back to the origin server.
+This will delete cached items from the edge caches so the next request will reload fresh content.
 
-```json
-{
-  "url" : "/contact-us",
-  "destination": "https://123.123.123.123/contact-us",
-  "host": "www.example.com",
-  "published": true,
-  "basic_auth_user": "username",
-  "basic_auth_pass": "password"
-}
+* Provide individual paths using the `Quant-Url` header
+* Provide space separated cache tags/keys using the `Cache-Keys` header
+* Trigger a soft purge by using the `Soft-Purge` header
+
+
+#### Example: Purge an individual content path
+```
+curl -X POST -H "Quant-Url: /content" https://api.quantcdn.io/v1/purge
+```
+
+#### Example: Purge the entire cache
+```
+curl -X POST -H "Quant-Url: /*" https://api.quantcdn.io/v1/purge
+```
+
+#### Example: Soft-purge an individual content path
+
+Soft purging will mark an item as stale rather than deleting it immediately from the cache. It will allow serving a stale copy of the content if the original is unavailable, which can be useful to continue serving content if your origin server is inaccessible.
+
+```
+curl -X POST -H "Quant-Url: /content" -H "Soft-Purge: true" https://api.quantcdn.io/v1/purge
+```
+
+#### Example: Purge using cache keys
+
+Cache keys (or cache tags) are keys associated with one or more pieces of content when your origin server exposes them via the `Cache-Keys` response header.
+
+```
+curl -X POST -H "Cache-Keys: azbe5 gormb1" https://api.quantcdn.io/v1/purge
 ```
