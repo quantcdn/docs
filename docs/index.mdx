@@ -1,0 +1,38 @@
+---
+title: QuantCDN
+description: Get started with QuantCDN.
+template: splash
+hero:
+  tagline: Get started with QuantCDN.
+  image:
+    file: ../../../public/favicon.svg
+  actions:
+    - text: Get started
+      link: /welcome/
+      icon: right-arrow
+      variant: primary
+    - text: Register / Login
+      link: https://dashboard.quantcdn.io
+      icon: external
+      attrs:
+        target: _blank
+---
+
+import { Card, CardGrid } from '../astro/node_modules/@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
