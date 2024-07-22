@@ -28,11 +28,11 @@ There are a variety of use cases, including:
 
 After creating a crawler configuration, you may run it manually from the `Crawl > Configs` page.
 
-![Crawler table](/img/crawler-table.png)
+![Crawler table](../../static/img/crawler-table.png)
 
 Click `Run > All URL` to begin a new crawl of your website. You can monitor the result from the `Crawl > Runs` section of the Dashboard.
 
-![Crawler runs](/img/crawler-runs.png)
+![Crawler runs](../../static/img/crawler-runs.png)
 
 :::note
 In order to unlock all crawler options and increase the throughput, you will need to verify the domain. From the `Crawl > Configs` page, click on the domain in the `Domain verification` section. Then, follow the instructions to verify via either a DNS record or by placing a file on the website in the defined location.

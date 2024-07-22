@@ -20,7 +20,7 @@ Check the **Enable Quant Forms** checkbox to enable forms for the route.
 
 Optionally provide success, missing value, and generic failure messages. These may contain markup.
 
-![Enable Quant Forms](/img/quant-forms-settings.jpg)
+![Enable Quant Forms](../../static/img/quant-forms-settings.jpg)
 
 ### Mandatory & remove fields
 
@@ -33,7 +33,7 @@ Optionally set **Remove fields** to strip specific form values from the result.
 
 Quant currently provides two notification options: Email and Slack.
 
-![Notification Configuration](/img/form-notifications.jpg)
+![Notification Configuration](../../static/img/form-notifications.jpg)
 
 Use **Disable HTML emails** to remove rich-text emails.
 Use **Include submission data** to include submission values in the notification message itself.
@@ -51,7 +51,7 @@ To do this, add a field to your form that should _not_ be filled in. For example
 <input type="hidden" name="fname">
 ```
 
-![Quant Forms honeypot](/img/quant-forms-honeypot.jpg)
+![Quant Forms honeypot](../../static/img/quant-forms-honeypot.jpg)
 
 Add this to the Quant configuration under "Honeypot fields". If a form is received with this value filled out the form will be rejected with an error.
 

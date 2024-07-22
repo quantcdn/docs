@@ -11,7 +11,7 @@ This is effectively a traditional CDN, however there are many additional options
 
 ## Configuration overview
 
-![Proxy configuration](/img/rules-proxy.png)
+![Proxy configuration](../../static/img/rules-proxy.png)
 
 * **Proxy address**: is your backend/origin server. This may be a FQDN or IP address and should include the protocol.
 * **Host header**: should be a valid Host header to send to the origin server.
@@ -27,7 +27,7 @@ You may use the wildcard captures in your proxies, simply include a capture valu
 
 ## Failover mode
 
-![Static failover mode](/img/rules-proxy-failover.png)
+![Static failover mode](../../static/img/rules-proxy-failover.png)
 
 When failover mode is enabled Quant is configured as a static failover service. In this mode, requests will be proxied back to your origin server unless signs of distress are detected.
 
@@ -39,8 +39,8 @@ In this mode you may receive notifications when a failover mode is triggered. Yo
 
 You may optionally inject extra request headers to your origin server. This is useful to provide an extra layer of security, e.g: pass a shared key back to your origin server to protect direct origin server access.
 
-![Additional header example](/img/rules-proxy-additional-header.png)
+![Additional header example](../../static/img/rules-proxy-additional-header.png)
 
 You may also optionally strip response headers. This is useful to exclude certain origin headers from the response sent back to your end users. For example, this may be useful for excluding headers that contain mention of versions of software running on your origin server to improve security posture.
 
-![Strip header example](/img/rules-proxy-strip-header.png)
+![Strip header example](../../static/img/rules-proxy-strip-header.png)
