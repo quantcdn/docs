@@ -12,10 +12,6 @@ concurrency:
 jobs:
   init:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./astro # <- sets the directory from which to run the bash script
     steps:
       -
         name: Set environment for branch
@@ -41,17 +37,20 @@ jobs:
         id: cache-node-modules
         uses: actions/cache@v2
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          path: ./astro/node_modules
+          key: astro-node-modules-${{ hashFiles('./astro/package-lock.json') }}
 
       - name: Install Dependencies
+        working-directory: ./astro
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm install
 
       - name: Build docs
-        run: yarn run build
+        working-directory: ./astro
+        run: npm run build
 
       - name: Show generated outputs
+        working-directory: ./astro
         run: find dist
 
       - name: Cache local revision file
@@ -67,7 +66,7 @@ jobs:
           customer: "${{ env.QUANT_CUSTOMER }}"
           project: "${{ env.QUANT_PROJECT }}"
           token: "${{ env.QUANT_TOKEN }}"
-          dir: dist
+          dir: astro/dist
           chunk-size: 20
           skip-purge: true
           enable-index-html: true
