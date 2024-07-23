@@ -4,7 +4,7 @@ title: Get started with Quant and Drupal
 sidebar_label: Initial setup
 ---
 
-Quant supports Drupal versions 7, 8, 9, and 10. The codebases are [maintained in GitHub](https://www.github.com/quantcdn/drupal) and are synced to the [Drupal.org QuantCDN project](https://www.drupal.org/project/quantcdn) when releases are created. As such, the Drupal.org repo can lag behind the GitHub repo slightly. Issues, feature requests, and pull requests can be raised in GitHub or Drupal.org.
+Quant supports Drupal versions 7, 8, 9, and 10+. The codebases are [maintained in GitHub](https://www.github.com/quantcdn/drupal) and are synced to the [Drupal.org QuantCDN project](https://www.drupal.org/project/quantcdn) when releases are created. As such, the Drupal.org repo can lag behind the GitHub repo slightly. Issues, feature requests, and pull requests can be raised in GitHub or Drupal.org.
 
 ## Setup
 

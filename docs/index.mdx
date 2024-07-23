@@ -5,7 +5,9 @@ template: splash
 hero:
   tagline: Get started with QuantCDN.
   image:
-    file: ../../../public/favicon.svg
+    light: ../../img/quant-logo.svg
+    dark: ../../img/quant-logo-reversed.svg
+    alt: QuantCDN logo
   actions:
     - text: Get started
       link: /welcome/
@@ -23,16 +25,16 @@ import { Card, CardGrid } from '../astro/node_modules/@astrojs/starlight/compone
 ## Next steps
 
 <CardGrid>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Create a new project" icon="add-document">
+		Learn how to <a href="/dashboard/get-started/">create your first project</a> to get started.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Basic configuration" icon="setting">
+		Enable image optimization, <a href="/dashboard/page-rules-waf/">WAF</a>, <a href="/dashboard/authentication/">password controls</a>.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Rules engine" icon="random">
+		Control your routing with our powerful <a href="/dashboard/page-rules/">edge rules engine</a>.
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="For developers" icon="forward-slash">
+		Learn more about using the <a href="/cli/get-started/">CLI tool</a> and <a href="/api/get-started-content/">APIs</a>.
 	</Card>
 </CardGrid>

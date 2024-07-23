@@ -4,7 +4,7 @@ title: Welcome to Quant
 sidebar_label: Welcome
 ---
 
-Quant is an all-in-one CDN and static website host designed to provide you the benefits of traditional CDN solutions as well as options for static web / Jamstack deployments. Quant provides integrations for popular CMS and static generators to ensure a low-effort solution to getting up and running, whether in traditional CDN or static web mode.
+Quant is an all-in-one CDN and static website host designed to provide you the benefits of traditional CDN solutions as well as options for static web / Jamstack deployments. Quant provides integrations for popular CMS and static generators to ensure low-effort to getting up and running, whether in traditional CDN or static web mode.
 
 While the fundamental idea is to ensure a low barrier to enjoy the many [benefits of the static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started-content) for developers to create their own custom integrations.
 
@@ -29,7 +29,7 @@ From the "New Project" screen simply select the CDN option and follow the steps.
 
 CMS integrations allow for an initial one-click push of an entire website, as well as ongoing content change tracking and automatically pushing updates to the Quant static edge. These integrations ensure your content is published on Quant the second it changes on your CMS.
 
-* [Drupal](/docs/integrations/drupal) (version 7, 8, 9)
+* [Drupal](/docs/integrations/drupal) (version 7, 8, 9 and 10+)
 * [WordPress](/docs/integrations/wordpress) version 5+
 
 ### Popular static web generators

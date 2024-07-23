@@ -11,6 +11,9 @@
 	--sl-color-gray-5: #283a4b;
 	--sl-color-gray-6: #162938;
 	--sl-color-black: #111920;
+
+    --purple-hsl: 255, 60%, 60%;
+    --overlay-blurple: hsla(var(--purple-hsl), .2);
 }
 /* Light mode colors. */
 :root[data-theme='light'] {
