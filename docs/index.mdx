@@ -1,0 +1,40 @@
+---
+title: QuantCDN
+description: Get started with QuantCDN.
+template: splash
+hero:
+  tagline: Get started with QuantCDN.
+  image:
+    light: ../../img/quant-logo.svg
+    dark: ../../img/quant-logo-reversed.svg
+    alt: QuantCDN logo
+  actions:
+    - text: Get started
+      link: /welcome/
+      icon: right-arrow
+      variant: primary
+    - text: Register / Login
+      link: https://dashboard.quantcdn.io
+      icon: external
+      attrs:
+        target: _blank
+---
+
+import { Card, CardGrid } from '../astro/node_modules/@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid>
+	<Card title="Create a new project" icon="add-document">
+		Learn how to <a href="/dashboard/get-started/">create your first project</a> to get started.
+	</Card>
+	<Card title="Basic configuration" icon="setting">
+		Enable image optimization, <a href="/dashboard/page-rules-waf/">WAF</a>, <a href="/dashboard/authentication/">password controls</a>.
+	</Card>
+	<Card title="Rules engine" icon="random">
+		Control your routing with our powerful <a href="/dashboard/page-rules/">edge rules engine</a>.
+	</Card>
+	<Card title="For developers" icon="forward-slash">
+		Learn more about using the <a href="/cli/get-started/">CLI tool</a> and <a href="/api/get-started-content/">APIs</a>.
+	</Card>
+</CardGrid>

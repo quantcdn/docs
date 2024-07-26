@@ -8,7 +8,7 @@ sidebar_label: Get started
 
 The Quant Dashboard provides a place to centrally manage projects and content, view revision history and provide access to your team (organization subscriptions only).
 
-![Quant Dashboard](/img/quant-dashboard-overview.jpg)
+![Quant Dashboard](../../static/img/quant-dashboard-overview.jpg)
 
 [Register for an account](https://dashboard.quantcdn.io/register) to get started.
 

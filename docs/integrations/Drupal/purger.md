@@ -42,13 +42,13 @@ In order for cache tag purging to be effective and efficient, inspect the cache 
 
 You can also update the path blocklist if there are certain paths that you don't want to be queued for seeding during cache clear events.
 
-![Quant Purger UI tab](/img/quant-purger-tab.png)
+![Quant Purger UI tab](../../../static/img/quant-purger-tab.png)
 *The Quant Purger tab in the Drupal UI links to the Purge UI.*
 
-![Purge UI](/img/quant-purger-purge-ui-config.png)
+![Purge UI](../../../static/img/quant-purger-purge-ui-config.png)
 *The Purge UI allow you to update the Quant Purger configuration.*
 
-![Quant Purger queue configuration](/img/quant-purger-config.png)
+![Quant Purger queue configuration](../../../static/img/quant-purger-config.png)
 *The path and tag blocklists can be modified in the Quant Purger configuration.*
 
 :::tip

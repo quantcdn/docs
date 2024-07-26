@@ -20,7 +20,7 @@ To add a rule:
 2. Create or edit a **proxy rule**
 3. Scroll down to *WAF settings* and check the **Enable WAF**
 
-![Quant Proxy Rule configuration](/img/waf/proxy-rule.png)
+![Quant Proxy Rule configuration](../../../static/img/waf/proxy-rule.png)
 
 ### Configuration settings
 

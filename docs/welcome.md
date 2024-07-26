@@ -4,26 +4,32 @@ title: Welcome to Quant
 sidebar_label: Welcome
 ---
 
-Quant is a static-web CDN designed to provide you the benefits of the static web without the complexity of rearchitecting your solution. Quant provides integrations for popular CMS and static generators to ensure your content and development workflows continue without interruption.
+Quant is an all-in-one CDN and static website host designed to provide you the benefits of traditional CDN solutions as well as options for static web / Jamstack deployments. Quant provides integrations for popular CMS and static generators to ensure low-effort to getting up and running, whether in traditional CDN or static web mode.
 
 While the fundamental idea is to ensure a low barrier to enjoy the many [benefits of the static web](https://www.quantcdn.io/benefits), there are rich [APIs](/docs/api/get-started-content) for developers to create their own custom integrations.
 
 ## Discover Quant
 
-Read more about the [features](https://www.quantcdn.io/features) that drive Quant, and what makes this solution different from other static web hosts.
+Read more about the [features](https://www.quantcdn.io/features) that drive Quant, and what makes this solution different from other CDN providers.
 
 
 ## Get started
 
 ### Create your first project
 
-Projects are maintained via the [Quant dashboard](/docs/dashboard/get-started).
+Projects are maintained via the [Quant dashboard](/docs/dashboard/get-started). When logged in, click the "New Project" link on the left sidebar to start the project creation process.
+
+### Set up a new CDN project
+
+From the "New Project" screen simply select the CDN option and follow the steps. Read more about setting up a project for [traditional CDN delivery](/docs/guides/cdn-setup).
+
+## Static / Jamstack setup
 
 ### CMS integration
 
 CMS integrations allow for an initial one-click push of an entire website, as well as ongoing content change tracking and automatically pushing updates to the Quant static edge. These integrations ensure your content is published on Quant the second it changes on your CMS.
 
-* [Drupal](/docs/integrations/drupal) (version 7, 8, 9)
+* [Drupal](/docs/integrations/drupal) (version 7, 8, 9 and 10+)
 * [WordPress](/docs/integrations/wordpress) version 5+
 
 ### Popular static web generators
@@ -46,7 +52,7 @@ Create structured search records and build faceted search pages with ease.
 
 [Read more about setting up Quant Search](/docs/dashboard/search).
 
-### Domains and TLS
+## Domains and TLS
 [Add an existing domain](/docs/dashboard/domains) to Quant to assign a custom domain to your site. We provide free automatic SSL certificates via [Let's Encrypt](https://letsencrypt.org/).
 
 

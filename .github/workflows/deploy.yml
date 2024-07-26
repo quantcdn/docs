@@ -37,18 +37,21 @@ jobs:
         id: cache-node-modules
         uses: actions/cache@v2
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('yarn.lock') }}
+          path: ./astro/node_modules
+          key: astro-node-modules-${{ hashFiles('./astro/package-lock.json') }}
 
       - name: Install Dependencies
+        working-directory: ./astro
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: yarn install
+        run: npm install
 
       - name: Build docs
-        run: yarn run build
+        working-directory: ./astro
+        run: npm run build
 
       - name: Show generated outputs
-        run: find build
+        working-directory: ./astro
+        run: find dist
 
       - name: Cache local revision file
         id: cache-quant-revisions
@@ -63,7 +66,7 @@ jobs:
           customer: "${{ env.QUANT_CUSTOMER }}"
           project: "${{ env.QUANT_PROJECT }}"
           token: "${{ env.QUANT_TOKEN }}"
-          dir: build
+          dir: astro/dist
           chunk-size: 20
           skip-purge: true
           enable-index-html: true

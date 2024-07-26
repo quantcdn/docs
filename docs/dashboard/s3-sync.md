@@ -25,7 +25,7 @@ The Quant Support team will provide you with a special S3 key to enter under you
 
 _Note:_ For best results the S3 sync should be configured before the first content seed.
 
-![Enable S3 sync](/img/quant-dashboard-s3.jpg)
+![Enable S3 sync](../../static/img/quant-dashboard-s3.jpg)
 
 ## Optionally configure S3 as a static site
 

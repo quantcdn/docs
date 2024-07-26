@@ -34,7 +34,7 @@ module.exports = {
                 { to: 'docs/dashboard/get-started', label: 'Dashboard', position: 'left' },
                 { to: 'docs/cli/get-started', label: 'CLI', position: 'left' },
                 { to: 'docs/api/get-started-content', label: 'API', position: 'left' },
-                { to: 'docs/security/waf/get-started', label: 'Security', position: 'left'},
+                { to: 'docs/security/WAF/get-started', label: 'Security', position: 'left'},
                 {
                     href: 'https://www.quantcdn.io',
                     label: 'quantcdn.io',

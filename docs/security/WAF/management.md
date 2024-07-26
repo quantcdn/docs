@@ -13,7 +13,7 @@ When enabling the WAF you need to ensure that you can identify blocks and add ex
 
 When the WAF blocks a request it will create a log message identifying which rule has been breached. These logs can be accessed from your [Quant Dashboard](https://dashboard.quantcdn.io/security/waf-log).
 
-![Quant WAF logs](/img/waf/dashboard-loc.png)
+![Quant WAF logs](../../../static/img/waf/dashboard-loc.png)
 
 Each log entry will include the following information:
 

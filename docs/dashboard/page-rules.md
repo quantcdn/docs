@@ -17,7 +17,7 @@ If no rules match, then Quant will serve the content as per normal.
 
 The first part of creating a new rule is to configure a matching pattern.
 
-![Create URL match](/img/rules-match.png)
+![Create URL match](../../static/img/rules-match.png)
 
 It may apply to all domains attached to a project, or specific domains.
 
@@ -53,7 +53,7 @@ For more detail and configuration documentation, see the [CDN Proxy page](./page
 
 Redirection will allow for content to redirect internally (relative) or externally (absolute).
 
-![Redirect configuration](/img/rules-redirect.png)
+![Redirect configuration](../../static/img/rules-redirect.png)
 
 * Redirect to: is the relative or absolute URL to redirect to. You may use captured values (e.g `$1`) in the redirection.
 * Redirect code: is the status code to issue with the redirect (permanent or temporary).
@@ -63,7 +63,7 @@ Redirection will allow for content to redirect internally (relative) or external
 
 Authentication allows you to password protect areas of your site.
 
-![Authentication configuration](/img/rules-auth.png)
+![Authentication configuration](../../static/img/rules-auth.png)
 
 
 ## Configure

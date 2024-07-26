@@ -12,10 +12,10 @@ module.exports = {
         label: 'Drupal',
         items: [
           'integrations/drupal',
-          'integrations/drupal/seed',
-          'integrations/drupal/purger',
-          'integrations/drupal/drupal-cron',
-          'integrations/drupal/drupal-search'
+          'integrations/Drupal/seed',
+          'integrations/Drupal/purger',
+          'integrations/Drupal/drupal-cron',
+          'integrations/Drupal/drupal-search'
         ],
       },
       'integrations/wordpress',
@@ -52,18 +52,18 @@ module.exports = {
         type: "category",
         label: "WAF",
         items: [
-          "security/waf/get-started",
-          "security/waf/management",
-          "security/waf/custom-rules",
+          "security/WAF/get-started",
+          "security/WAF/management",
+          "security/WAF/custom-rules",
           {
             type: "category",
             label: "Ruleset",
             items: [
-              'security/waf/crs/910',
-              'security/waf/crs/920',
-              'security/waf/crs/930',
-              'security/waf/crs/931',
-              'security/waf/crs/932',
+              'security/WAF/CRS/910',
+              'security/WAF/CRS/920',
+              'security/WAF/CRS/930',
+              'security/WAF/CRS/931',
+              'security/WAF/CRS/932',
             ],
           },
         ],

@@ -6,7 +6,7 @@ sidebar_label: Domains and SSL
 
 The "Domains" section of the dashboard will show all domains currently attached to the currently active project.
 
-![Domains section](/img/quant-dashboard-domains.jpg)
+![Domains section](../../static/img/quant-dashboard-domains.jpg)
 
 Attach domains by clicking the "Add domain" button in the upper right.
 

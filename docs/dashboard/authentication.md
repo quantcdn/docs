@@ -8,7 +8,7 @@ You may protect your projects from public access by requiring a username and pas
 
 Navigate to the projects section of the dashboard, and edit any project to update authentication settings.
 
-![Enable project authentication](/img/quant-dashboard-auth.jpg)
+![Enable project authentication](../../static/img/quant-dashboard-auth.jpg)
 
 Simply provide a username and password to protect the project with basic authentication.
 
