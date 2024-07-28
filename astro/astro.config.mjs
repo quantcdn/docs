@@ -62,7 +62,7 @@ export default defineConfig({
         // Generate the OpenAPI documentation pages.
         starlightOpenAPI([
           {
-           base: 'api',
+           base: 'content-api',
            label: 'Content API',
            schema: './src/content/schemas/content-api.json',
           },
