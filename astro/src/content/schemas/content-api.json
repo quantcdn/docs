@@ -1,0 +1,1396 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "The Quant Content API allows you to manage your published assets programmatically",
+    "version": "1.9.1",
+    "title": "Quant API",
+    "termsOfService": "https://www.quantcdn.io/legal/terms-service",
+    "contact": {
+      "email": "api@quantcdn.io"
+    }
+  },
+  "tags": [
+    {
+      "name": "meta",
+      "description": "Metadata that describes your content, files, and revisions"
+    },
+    {
+      "name": "content",
+      "description": "Perform operations on content"
+    },
+    {
+      "name": "search",
+      "description": "Perform operations on search index"
+    },
+    {
+      "name": "misc"
+    }
+  ],
+  "paths": {
+    "/global-meta": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "description": "Returns a list of published assets",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "description": "Optionally limit to a single URL",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "quant_type",
+            "description": "Filter by asset type",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "content",
+                "redirect",
+                "file"
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "published",
+            "description": "Filter by published state",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "deleted",
+            "description": "Filter by deleted state",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "global_meta": {
+                      "type": "object",
+                      "properties": {
+                        "records": {
+                          "type": "array",
+                          "items": {
+                            "allOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "last_modified": {
+                                    "type": "string",
+                                    "description": "Last modified date"
+                                  },
+                                  "meta": {
+                                    "$ref": "#/components/schemas/Meta"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "total_records": {
+                      "type": "integer",
+                      "example": 1000,
+                      "description": "The number of assets Quant knows about"
+                    },
+                    "total_pages": {
+                      "type": "integer",
+                      "example": 1,
+                      "description": "The total number of pages required to return all data"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "example": 1,
+                      "description": "The current page"
+                    },
+                    "page_size": {
+                      "type": "integer",
+                      "example": 10,
+                      "description": "The number of meta records per page"
+                    },
+                    "refine_search": {
+                      "type": "boolean",
+                      "description": "Indicates if too many results were found and query should be refined",
+                      "example": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/url-meta": {
+      "post": {
+        "tags": [
+          "meta"
+        ],
+        "description": "Returns a list of assets by query",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "Quant-Url"
+                ],
+                "properties": {
+                  "Quant-Url": {
+                    "type": "array",
+                    "description": "List of URLs to retrieve meta for.",
+                    "example": [
+                      "/home",
+                      "/css/styles.css",
+                      "/contact-us"
+                    ],
+                    "items": {}
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "global_meta": {
+                      "type": "object",
+                      "properties": {
+                        "records": {
+                          "type": "array",
+                          "items": {
+                            "allOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "last_modified": {
+                                    "type": "string",
+                                    "description": "Last modified date"
+                                  },
+                                  "meta": {
+                                    "$ref": "#/components/schemas/Meta"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/revisions": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "description": "Returns a list of revisions for a given asset",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "revisions": {
+                      "type": "object",
+                      "description": "Revision objects, mapped by revision number (`string`)"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "The url of the asset"
+                    },
+                    "published": {
+                      "type": "boolean",
+                      "description": "Published state of the asset"
+                    },
+                    "published_revision": {
+                      "type": "integer",
+                      "description": "Published revision number of the asset"
+                    },
+                    "transitions": {
+                      "type": "array",
+                      "description": "List of transitions",
+                      "items": {
+                        "$ref": "#/components/schemas/Transition"
+                      }
+                    },
+                    "highest_revision_number": {
+                      "type": "integer",
+                      "description": "Last revision number"
+                    },
+                    "transition_revision": {
+                      "type": "integer",
+                      "description": "The transition number, if set"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Content not found"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/revisions/{revision}": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "description": "Returns metadata for a given revision",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "revision",
+            "required": true,
+            "description": "May be special key (first|last|published) or the specific revision id",
+            "schema": {
+              "type": "integer",
+              "enum": [
+                "first",
+                "last",
+                "published",
+                "revision_id"
+              ]
+            }
+          },
+          {
+            "in": "path",
+            "name": "include_content",
+            "required": true,
+            "description": "Control whether content is returned in the response",
+            "schema": {
+              "type": "query",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Revision"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Revision not found"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/": {
+      "post": {
+        "tags": [
+          "content"
+        ],
+        "description": "Create content or file revision",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-File-Url",
+            "description": "Required for binary file uploads only",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "url",
+                  "content",
+                  "published"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "description": "The content URL.  Must be relative and start with a leading '/'",
+                    "maxLength": 4096
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The content (e.g. html)"
+                  },
+                  "published": {
+                    "type": "boolean",
+                    "description": "If the asset should be published"
+                  },
+                  "content_timestamp": {
+                    "type": "integer",
+                    "description": "User defined timestamp for this content item"
+                  },
+                  "info": {
+                    "$ref": "#/components/schemas/Info"
+                  },
+                  "transitions": {
+                    "type": "array",
+                    "description": "List of transitions",
+                    "items": {
+                      "$ref": "#/components/schemas/Transition"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Meta"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/redirect": {
+      "post": {
+        "tags": [
+          "content"
+        ],
+        "description": "Create a redirect",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "url",
+                  "redirect_url",
+                  "redirect_http_code",
+                  "published"
+                ],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "description": "The redirect from URL"
+                  },
+                  "redirect_url": {
+                    "type": "string",
+                    "description": "The destination URL"
+                  },
+                  "redirect_http_code": {
+                    "type": "integer",
+                    "description": "The HTTP code to send with the redirect",
+                    "example": 301
+                  },
+                  "published": {
+                    "type": "boolean",
+                    "description": "If the redirect is published"
+                  },
+                  "content_timestamp": {
+                    "type": "integer",
+                    "description": "User defined timestamp for this content item"
+                  },
+                  "info": {
+                    "$ref": "#/components/schemas/Info"
+                  },
+                  "transitions": {
+                    "type": "array",
+                    "description": "List of transitions",
+                    "items": {
+                      "$ref": "#/components/schemas/Transition"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Revision"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "redirect_http_code": {
+                          "type": "integer",
+                          "description": "The HTTP code",
+                          "example": 301
+                        },
+                        "highest_revision_number": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string",
+                          "description": "The redirecrt from URL"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/unpublish": {
+      "patch": {
+        "tags": [
+          "content"
+        ],
+        "description": "Unpublish an asset",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Revision"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/publish/{revision}": {
+      "patch": {
+        "tags": [
+          "content"
+        ],
+        "description": "Publish an asset revision",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "revision",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Revision"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/delete": {
+      "delete": {
+        "tags": [
+          "content"
+        ],
+        "description": "Delete an asset revision",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "description": "The url to the asset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "revision",
+            "required": true,
+            "description": "The revision to delete",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "boolean",
+                          "description": "Indicates at least one error ocurred"
+                        },
+                        "errors": {
+                          "type": "array",
+                          "description": "List of any errors",
+                          "items": {
+                            "type": "object"
+                          }
+                        },
+                        "meta": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Revision"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "noop"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/ping": {
+      "get": {
+        "tags": [
+          "misc"
+        ],
+        "summary": "Project validate",
+        "description": "Ping the server. This endpoint can be used to verify credentials for a given project. Returns basic project detail and configuration",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "description": "Configuration associated with a project"
+                    },
+                    "project": {
+                      "type": "string",
+                      "description": "The project machine name"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/purge": {
+      "post": {
+        "tags": [
+          "misc"
+        ],
+        "summary": "Purge CDN cache",
+        "description": "Purge CDN cache. Supports purging via individual content paths or cache-keys.",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "description": "The URL path to purge",
+            "example": "/content",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Cache-Keys",
+            "description": "The cache keys to purge separated by a space",
+            "example": "azbe5 gormb1",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Soft-Purge",
+            "description": "Set to issue a soft-purge of the content, which will make it as stale rather than immediately delete from edge caches",
+            "example": "true",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay"
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/search": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "description": "Returns search configuration and index status",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "settings": {
+                      "type": "object",
+                      "description": "Search configuration for the index"
+                    },
+                    "index": {
+                      "type": "object",
+                      "description": "Detail related to index size and status"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "search"
+        ],
+        "description": "Create or update items in search index",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "description": "Search records",
+                "items": {
+                  "$ref": "#/components/schemas/SearchRecord"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Okay"
+          },
+          "400": {
+            "description": "Invalid payload, should contain array of search records"
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "search"
+        ],
+        "description": "Delete a single record in search index",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Url",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay"
+          },
+          "400": {
+            "description": "Missing Quant-Url header"
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    },
+    "/search/all": {
+      "delete": {
+        "tags": [
+          "search"
+        ],
+        "description": "Clears a search index",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Quant-Customer",
+            "description": "The customer account name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Quant-Project",
+            "description": "The project machine name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Okay"
+          },
+          "403": {
+            "description": "Invalid credentials"
+          }
+        },
+        "security": [
+          {
+            "quant_token": []
+          }
+        ]
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Quant",
+    "url": "http://docs.quantcdn.io"
+  },
+  "servers": [
+    {
+      "url": "https://api.quantcdn.io/v1"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "quant_token": {
+        "type": "apiKey",
+        "name": "Quant-Token",
+        "in": "header"
+      }
+    },
+    "schemas": {
+      "Revision": {
+        "type": "object",
+        "properties": {
+          "md5": {
+            "type": "string",
+            "description": "The file MD5"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of asset"
+          },
+          "byte_length": {
+            "type": "integer",
+            "description": "Content length of the asset"
+          },
+          "revision_number": {
+            "type": "integer",
+            "description": "The revision number"
+          },
+          "date_timestamp": {
+            "type": "integer",
+            "description": "Unix timestamp"
+          },
+          "deleted": {
+            "type": "boolean",
+            "description": "If the underlying file for this revision has been deleted"
+          },
+          "deleted_timestamp": {
+            "type": "integer",
+            "description": "The time the file was deleted"
+          },
+          "transitions": {
+            "type": "array",
+            "description": "List of transitions",
+            "items": {
+              "$ref": "#/components/schemas/Transition"
+            }
+          },
+          "info": {
+            "$ref": "#/components/schemas/Info"
+          }
+        }
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The relative URL of the asset"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of asset"
+          },
+          "seq_num": {
+            "type": "integer",
+            "description": "The sequence number"
+          },
+          "published": {
+            "type": "boolean",
+            "description": "If the asset is published"
+          },
+          "published_revision": {
+            "type": "integer",
+            "description": "The identifier for the published revision"
+          },
+          "published_md5": {
+            "type": "string",
+            "description": "Unique hash of the asset"
+          },
+          "byte_length": {
+            "type": "integer",
+            "description": "Content length of the asset"
+          },
+          "revision_count": {
+            "type": "integer",
+            "description": "The number of revisions that have been added"
+          },
+          "highest_revision_number": {
+            "type": "integer",
+            "description": "The latest revision id"
+          },
+          "deleted": {
+            "type": "boolean",
+            "description": "If the underlying file for this revision has been deleted"
+          },
+          "deleted_timestamp": {
+            "type": "integer",
+            "description": "The time the file was deleted"
+          },
+          "md5": {
+            "type": "string",
+            "description": "The file MD5"
+          },
+          "revision_number": {
+            "type": "integer",
+            "description": "The revision number"
+          },
+          "date_timestamp": {
+            "type": "integer",
+            "description": "Unix timestamp"
+          }
+        }
+      },
+      "Info": {
+        "type": "object",
+        "description": "Metadata stored with this revision",
+        "properties": {
+          "author_user": {
+            "type": "string",
+            "description": "The author user id",
+            "maxLength": 128
+          },
+          "author_name": {
+            "type": "string",
+            "description": "The author name",
+            "maxLength": 128
+          },
+          "author_email": {
+            "type": "string",
+            "description": "The author email",
+            "maxLength": 255
+          },
+          "log": {
+            "type": "string",
+            "description": "A revision log message",
+            "maxLength": 255
+          },
+          "custom_1": {
+            "type": "string",
+            "description": "Custom field 1",
+            "maxLength": 255
+          },
+          "custom_2": {
+            "type": "string",
+            "description": "Custom field 2",
+            "maxLength": 255
+          },
+          "source": {
+            "type": "string",
+            "description": "Tag for the source of this revision",
+            "maxLength": 50
+          }
+        }
+      },
+      "Transition": {
+        "type": "object",
+        "description": "A transition definition (e.g. for scheduled publish)",
+        "properties": {
+          "state": {
+            "type": "string",
+            "description": "The transition state (e.g. 'published')",
+            "enum": [
+              "published",
+              "unpublished"
+            ]
+          },
+          "date_timestamp": {
+            "type": "integer",
+            "description": "The date from which the transition applies"
+          }
+        }
+      },
+      "SearchRecord": {
+        "type": "object",
+        "description": "A search record",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of a search record"
+          },
+          "content": {
+            "type": "string",
+            "description": "The full body of content related to a search record"
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL of a search record"
+          },
+          "summary": {
+            "type": "string",
+            "description": "The optional summary of a search record"
+          }
+        }
+      }
+    }
+  }
+}

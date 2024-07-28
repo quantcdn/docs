@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi'
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -53,7 +55,19 @@ export default defineConfig({
 					label: 'Security',
 					autogenerate: { directory: 'security' },
 				},
+        // Add the generated sidebar group to the sidebar.
+        ...openAPISidebarGroups,
 			],
+			plugins: [
+        // Generate the OpenAPI documentation pages.
+        starlightOpenAPI([
+          {
+           base: 'api',
+           label: 'Content API',
+           schema: './src/content/schemas/content-api.json',
+          },
+        ]),
+			]
 		}),
 	],
 });
